@@ -36,27 +36,27 @@ The Fellowship Companion is an evolving system. It is not finished from the begi
 ### Chapter I - Setting Out
 > “I will take the Ring, though I do not know the way.” - Frodo
 
-Go to Chapter I →
+[Go to Chapter I →](chapters/chapter-1-setting-out.md)
 
 ### Chapter II - Paths & Choices
 > “All we have to decide is what to do with the time that is given us.” - Gandalf
 
-Go to Chapter II →
+[Go to Chapter II →](chapters/chapter-2-paths-and-choices.md)
 
 ### Chapter III - Making It Visible
 > “I like less than half of you half as well as you deserve.” - Bilbo
 
-Go to Chapter III →
+[Go to Chapter III →](chapters/chapter-3-making-it-visible.md)
 
 ### Chapter IV - When Things React
 > “Even the wise cannot see all ends.” - Gandalf
 
-Go to Chapter IV →
+[Go to Chapter IV →](chapters/chapter-4-when-things-react.md)
 
 ### Chapter V - The Tale Continues
 > “The tale grew in the telling.” - Bilbo
 
-Go to Chapter V →
+[Go to Chapter V →](chapters/chapter-5-the-tale-continues.md)
 
 ## Key Features of The Fellowship Companion
 
