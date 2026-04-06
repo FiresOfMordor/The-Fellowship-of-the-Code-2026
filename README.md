@@ -66,8 +66,6 @@ We are the team **FiresOfMordor**, a group of students working together on the j
 
 ## Changelog
 
-## Changelog
-
 - 2026-04-02: Created repository
 - 2026-04-02: Added required folder structure
 - 2026-04-02: Added initial TFC project description
