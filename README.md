@@ -16,13 +16,11 @@
 
 ## Purpose of The Fellowship Companion (TFC)
 
-We are the team FiresOfMordor, a group of students working together on the journey from the Shire to Mordor. Along the way, we are building The Fellowship Companion, a digital tool to support planning, decisions, communication, and survival.
-
-The Fellowship Companion is an evolving system. It is not finished from the beginning, but grows as we learn more about design, structure, logic, and development throughout the course.
+We are the team **FiresOfMordor**, a group of students working together on the journey from the Shire to Mordor. Along the way, we are building **The Fellowship Companion**, a digital support system for planning, decision-making, shared understanding, and survival during the journey. The Fellowship Companion is an evolving system. It is not complete from the beginning, but grows across the course as we move from concept to design, logic, and integration. Our current Phase 1 focus is **The Shire Guide**, a conceptual component of The Fellowship Companion that supports environmental awareness, resting decisions, and foraging decisions in unfamiliar terrain.
 
 - **Who we are:** FiresOfMordor, a student team in the course
-- **What we build:** A companion system that helps manage the journey, resources, tasks, and decisions
-- **Why we build it:** To understand how developers think, plan, design, and explain software systems
+- **What we build:** An evolving companion system that helps manage journey-related decisions, risks, resources, and reflections
+- **Why we build it:** To understand how developers think, scope systems, justify decisions, and connect artifacts into one coherent product
 
 ## Rules of our Journey
 
@@ -60,14 +58,18 @@ The Fellowship Companion is an evolving system. It is not finished from the begi
 
 ## Key Features of The Fellowship Companion
 
-- **Journey Overview:** show the current state of the Fellowship
-- **Decision Support:** help explore options, routes, and consequences
-- **Resource Tracking:** track important journey resources and conditions
-- **Shared Understanding:** provide one place for the Fellowship to stay aligned
-- **Journey Record:** connect artifacts, decisions, and reflections through The Red Book
+- **Situational Awareness:** help the Fellowship understand the current environment, risks, and constraints
+- **Decision Support:** support resting, foraging, and short-term survival decisions in unfamiliar terrain
+- **Resource Awareness:** help identify useful, risky, and uncertain natural resources
+- **Shared Understanding:** provide one clear basis for discussion and alignment within the Fellowship
+- **Journey Record:** document decisions, assumptions, and changes over time through the Companion and The Red Book
 
 ## Changelog
 
-- 2026-04-02: Created repository and initialized `README.md`
+## Changelog
+
+- 2026-04-02: Created repository
 - 2026-04-02: Added required folder structure
-- 2026-04-02: Added initial project description for The Fellowship Companion
+- 2026-04-02: Added initial TFC project description
+- 2026-04-06: Added Artifact I (`artifact-1-situation-intent.md`)
+- 2026-04-06: Updated README for Phase 1 focus
