@@ -71,3 +71,4 @@ We are the team **FiresOfMordor**, a group of students working together on the j
 - 2026-04-02: Added initial TFC project description
 - 2026-04-06: Added Artifact I (`artifact-1-situation-intent.md`)
 - 2026-04-06: Updated README for Phase 1 focus
+- 2026-04-06: Added 1st Chapter in the Red Book
