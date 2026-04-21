@@ -4,15 +4,16 @@
 
 **Support Resting and Camp Decisions**
 
-[Insert final introduction here.]
+This capability helps the Fellowship evaluate whether a possible resting place is suitable for a short stop. In this artifact, the capability is designed around a concrete resting decision in the Midgewater Marshes, where the group must assess risk under uncertainty.
+At the same time, the flow is intended as a reusable decision pattern within The Fellowship Companion. The same structure can support future resting and risk decisions throughout the journey whenever the Fellowship needs to compare safety, concealment, environmental risks, available resources, and information uncertainty before deciding whether to rest, rest briefly with caution, or move on.
 
 ### Why this capability?
 
-[Insert short explanation here.]
+Resting in the Midgewater Marshes is not a simple comfort decision. A poor resting place can expose the Fellowship, slow down the journey, weaken the group, or increase the risk of being discovered. This capability gives the group a structured way to assess a risky situation before committing to rest.
 
 ### Why is it meaningful for the Fellowship at this stage of the journey?
 
-[Insert short explanation here.]
+At this stage, the Fellowship is moving through unfamiliar terrain and cannot rely on complete or fully reliable information. The group needs a shared basis for deciding whether a location is safe enough for rest, instead of relying only on individual intuition, unclear assumptions, or hurried judgment.
 
 ---
 
