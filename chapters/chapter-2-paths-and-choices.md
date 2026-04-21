@@ -6,7 +6,7 @@
 
 ## Artifact
 
-- File: /artifacts/artifact-2/artifact-2-deciding.md
+- File: artifacts/artifact-2/artifact-2-deciding.md
 - Tasks: to be added later
 
 ## AI Assistance
