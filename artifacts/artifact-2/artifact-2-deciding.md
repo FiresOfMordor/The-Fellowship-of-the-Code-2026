@@ -51,7 +51,7 @@ See the linked Mermaid file above.
 
 ## 3. Wireframe
 
-**File:** /artifacts/artifact-2/src/decisions.jpeg
+**File:** [`src/decisions.jpeg`](./src/decisions.jpeg)
 
 ![Wireframe: Camp Suitability Check](./src/decisions.jpeg)
 
