@@ -23,24 +23,24 @@ At this stage, the Fellowship is moving through unfamiliar terrain and cannot re
 
 ### Sequence of Steps
 
-1.	Search for a potential resting place. 
-2.	 Check whether a resting place was found. If no candidate is available, return to Step 1 and keep searching. If a candidate is found, proceed. 
-3.	 Check for immediate danger at the candidate location. If danger is present, discard the location and return to Step 1. If no danger is present, proceed. 
-4.	Assess the group's condition by evaluating fatigue level. Determine whether the group is stable, tired, or critical. 
-5.	Act on the fatigue assessment:
-  •	If stable: conclude that there is no urgent need to rest, and go to Step 10 
-  •	If tired: note that rest should be considered, and proceed to Step 6.
-  •	If critical: note that rest is required if a viable site can be confirmed, and proceed to Step 6.
-7.	Evaluate whether the environment is usable. If it is not usable, return to Step 1. If it is usable, proceed. 
-8.	Evaluate the level of concealment the location offers. Classify it as good, partial, or poor. 
-9.	Act on the concealment assessment:
-  •	If good: take a Normal Rest, then go to Step 10.
-  •	If partial: take a Cautious Rest, then go to Step 10.
-  •	If poor: proceed to Step 9.
-11.	Check whether fatigue is critical (only reached when concealment is poor):
-  •	If yes: accept the exposure risk, take a Cautious Rest, and go to Step 10.
-  •	If no: reject the location and return to Step 1.
-12.	Continue the journey. 
+1.	**Search for a potential resting place.**
+2.	**Check whether a resting place was found. If no candidate is available, return to Step 1 and keep searching. If a candidate is found, proceed.**
+3.	**Check for immediate danger at the candidate location. If danger is present, discard the location and return to Step 1. If no danger is present, proceed.**
+4.	**Assess the group's condition by evaluating fatigue level. Determine whether the group is stable, tired, or critical.**
+5.	**Act on the fatigue assessment:**
+   - If stable: conclude that there is no urgent need to rest, and go to Step 10 
+   - If tired: note that rest should be considered, and proceed to Step 6.
+   - If critical: note that rest is required if a viable site can be confirmed, and proceed to Step 6.
+7.	**Evaluate whether the environment is usable. If it is not usable, return to Step 1. If it is usable, proceed.**
+8.	**Evaluate the level of concealment the location offers. Classify it as good, partial, or poor.**
+9.	**Act on the concealment assessment:**
+   -	If good: take a Normal Rest, then go to Step 10.
+   -	If partial: take a Cautious Rest, then go to Step 10.
+   -	If poor: proceed to Step 9.
+11.	**Check whether fatigue is critical (only reached when concealment is poor):**
+   -	If yes: accept the exposure risk, take a Cautious Rest, and go to Step 10.
+   -	If no: reject the location and return to Step 1.
+12.	**Continue the journey.**
 
 
 ### Mermaid Flowchart
