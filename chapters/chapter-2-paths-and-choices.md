@@ -6,7 +6,7 @@
 
 ## Artifact
 
-- Link to the artifact: to be added later
+- Link to the artifact: [Artifact II – Decisions](./artifacts/artifact-2/artifact-2-deciding.md)
 - Tasks: to be added later
 
 ## AI Assistance
