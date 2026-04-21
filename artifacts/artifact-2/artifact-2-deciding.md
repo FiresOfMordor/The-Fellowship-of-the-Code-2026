@@ -52,11 +52,14 @@ At this stage, the Fellowship is moving through unfamiliar terrain and cannot re
 
 ## 4. Design Rationale
 
-###How our design supports the intent and value from Assignment 1###
+**How our design supports the intent and value from Assignment 1**
+
 Our design supports the Shire Guide’s intent by helping the Fellowship make safer resting decisions in unfamiliar terrain. The flow structures this decision around immediate danger, group condition, environmental suitability, and concealment. This supports the value from Assignment 1 by reducing poor decisions that could slow the journey, weaken the group, or increase the risk of being discovered.
 
-###What we deliberately left out###
+**What we deliberately left out**
+
 We deliberately left out tactical combat support, long-distance communication, full route planning, and detailed resource analysis. These elements are outside the selected capability and would make the artifact too broad. We also left out technical implementation details, because this assignment focuses on decision structure and interface design.
 
-###Which assumptions and constraints shaped our design###
+**Which assumptions and constraints shaped our design**
+
 Our design assumes that the Fellowship must make resting decisions quickly and under uncertainty. The main constraints are limited time, incomplete information, and the need for a simple mobile interface that is easy to understand at a glance. For that reason, the design focuses on a small number of key factors and a clear recommendation rather than a complex multi-screen process.
