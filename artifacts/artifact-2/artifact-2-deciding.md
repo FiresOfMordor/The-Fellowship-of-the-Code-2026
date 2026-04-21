@@ -53,8 +53,6 @@ See the linked Mermaid file above.
 
 **File:** [`src/decisions.jpeg`](./src/decisions.jpeg)
 
-![Wireframe: Camp Suitability Check](./src/decisions.jpeg)
-
 ---
 
 ## 4. Design Rationale
