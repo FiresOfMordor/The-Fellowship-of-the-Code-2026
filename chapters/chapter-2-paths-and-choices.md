@@ -24,7 +24,7 @@ Our selected capability was Support Resting and Camp Decisions. We developed it 
 
 **Supporting files:**
 - [artifacts/artifact-2/src/decisions.mermaid.md](../artifacts/artifact-2/src/decisions.mermaid.md)
-- [artifacts/artifact-2/src/decisions.png](../artifacts/artifact-2/src/decisions.png)
+- [artifacts/artifact-2/src/decisions.jpeg](../artifacts/artifact-2/src/decisions.jpeg)
 
 **Focus:** Selected system capability, Mermaid flowchart, wireframe, and short design rationale for Camp Suitability Check
 
