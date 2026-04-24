@@ -77,7 +77,8 @@ We are the team **FiresOfMordor**, a group of students working together on the j
 - 2026-04-06: Added Artifact I (`artifact-1-situation-intent.md`)
 - 2026-04-06: Updated README for Phase 1 focus
 - 2026-04-06: Added Chapter I in The Red Book
-- 2026-04-17: Added Artifact II (`artifact-2-deciding.md`)
-- 2026-04-17: Added Mermaid flow for Artifact II
-- 2026-04-17: Added wireframe for Artifact II
-- 2026-04-17: Updated README for Phase 2 focus
+- 2026-04-21: Added Artifact II (`artifact-2-deciding.md`)
+- 2026-04-21: Added Mermaid flow for Artifact II
+- 2026-04-21: Added wireframe for Artifact II
+- 2026-04-21: Updated README for Phase 2 focus
+- 2026-04-24: Added Chapter II in The Red Book
