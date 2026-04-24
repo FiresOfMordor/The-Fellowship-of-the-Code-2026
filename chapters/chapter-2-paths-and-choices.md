@@ -4,11 +4,11 @@
 
 ## Summary
 
-This chapter documents our work on **Artifact II – Decisions: Camp Suitability Check**.
+This chapter documents our work on Artifact II – Decisions: Camp Suitability Check.
 
 In this phase, we moved from the conceptual level of Assignment 1 to a more concrete design perspective. Instead of describing only what the system should enable, we focused on how one selected capability works step by step in a real journey situation.
 
-Our selected capability was **Support Resting and Camp Decisions**. We developed it around a concrete scenario in the Midgewater Marshes, where the Fellowship must decide whether a possible resting place is suitable, whether only a cautious rest is possible, or whether the group should continue searching. The result of this phase was a decision flow, a low-fidelity wireframe, and a short design rationale that connects the design back to the intent, value, and constraints from Assignment 1.
+Our selected capability was Support Resting and Camp Decisions. We developed it around a concrete scenario in the Midgewater Marshes, where the Fellowship must decide whether a possible resting place is suitable, whether only a cautious rest is possible, or whether the group should continue searching. The result of this phase was a decision flow, a low-fidelity wireframe, and a short design rationale that connects the design back to the intent, value, and constraints from Assignment 1.
 
 ### Learning Outcomes
 
@@ -26,9 +26,9 @@ Our selected capability was **Support Resting and Camp Decisions**. We developed
 - [artifacts/artifact-2/src/decisions.mermaid.md](../artifacts/artifact-2/src/decisions.mermaid.md)
 - [artifacts/artifact-2/src/decisions.png](../artifacts/artifact-2/src/decisions.png)
 
-**Focus:** Selected system capability, Mermaid flowchart, wireframe, and short design rationale for **Camp Suitability Check**
+**Focus:** Selected system capability, Mermaid flowchart, wireframe, and short design rationale for Camp Suitability Check
 
-- The artifact develops the capability **Support Resting and Camp Decisions** from Assignment 1 into a concrete design slice.
+- The artifact develops the capability Support Resting and Camp Decisions from Assignment 1 into a concrete design slice.
 - The flow models a resting decision through search, danger check, group condition, environmental suitability, concealment, and possible resting outcomes.
 - The wireframe translates this logic into a low-fidelity mobile screen with location, danger level, a recommendation, four key factors, and simple navigation elements.
 - The artifact stays focused on one concrete decision instead of trying to cover the whole Fellowship Companion at once.
