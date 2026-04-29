@@ -29,16 +29,16 @@ The implementation follows the wireframe from Assignment 2, while also addressin
 
 ### How our design supports the intent and value from Assignment 1
 
-[Insert final text here.]
+This interface supports the intent of the Shire Guide by helping the Fellowship make safer resting decisions in unfamiliar terrain. The static page makes the current decision, the recommendation, and the most relevant supporting factors visible at a glance. This supports the value from Assignment 1 by reducing poor decisions under uncertainty and by giving the group a shared basis for judgment.
 
 ### How it reflects the wireframe from Assignment 2
 
-[Insert final text here.]
+The implementation keeps the core structure of the wireframe: location, recommendation, key factors, notice, and next actions. At the same time, we improved the hierarchy based on the feedback from Assignment 2 by making the system identity visible, adding a back button, and giving the main recommendation much stronger visual emphasis. The result stays consistent with the earlier design, but expresses it more clearly as an interface.
 
 ### What we deliberately did not implement yet
 
-[Insert final text here.]
+We deliberately did not implement any behavior, search logic, scoring logic, or dynamic updates. We also left out interactive map behavior and more complex flows, because this assignment focuses on static representation through HTML and CSS rather than functionality. The page therefore communicates structure and intent without pretending to be a finished application.
 
 ### Which assumptions and constraints shaped our decisions
 
-[Insert final text here.]
+We assumed that the Fellowship needs to understand the situation quickly and under uncertainty. The main constraints were static implementation only, no JavaScript, no backend, and a strong focus on structure, readability, and semantic grouping. For that reason, the interface uses a compact mobile-like layout, highlights the recommendation clearly, and keeps uncertainty visible through the notice and confidence summary.
