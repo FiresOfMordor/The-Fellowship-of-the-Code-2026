@@ -6,7 +6,12 @@
 
 ## Artifact
 
-- Link to the artifact: to be added later
+**File:** [artifacts/artifact-3/artifact-3-representation.md](../artifacts/artifact-3/artifact-3-representation.md)
+
+**Supporting files:**
+- [artifacts/artifact-3/src/interface.html](../artifacts/artifact-3/src/interface.html)
+- [artifacts/artifact-3/src/style.css](../artifacts/artifact-3/src/style.css)
+
 - Tasks: to be added later
 
 ## AI Assistance
