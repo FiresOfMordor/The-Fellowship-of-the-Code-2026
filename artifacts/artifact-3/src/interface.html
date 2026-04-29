@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Shire Guide - Camp Suitability Check</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-frame">
+      <header class="top-bar" aria-label="Screen header">
+        <button class="back-button" type="button" aria-label="Go back">Back</button>
+        <div class="system-mark" aria-label="System identity">
+          <p class="companion-name">The Fellowship Companion</p>
+          <p class="guide-name">The Shire Guide</p>
+        </div>
+      </header>
+
+      <main class="screen">
+        <section class="context" aria-labelledby="page-title">
+          <p class="ornament">✦</p>
+          <p class="area-label">Midgewater Marshes</p>
+          <h1 id="page-title">Camp Suitability Check</h1>
+          <p class="decision-question">Should the Fellowship rest here?</p>
+        </section>
+
+        <section class="recommendation" aria-labelledby="recommendation-title">
+          <div class="tree-mark" aria-hidden="true">♧</div>
+          <div>
+            <p class="section-label">Recommended Action</p>
+            <h2 id="recommendation-title">Rest briefly with caution</h2>
+            <p class="confidence">Current risk: Medium</p>
+          </div>
+          <p class="recommendation-copy">
+            The location offers partial concealment, but the ground is uncertain and signs of danger are unclear.
+          </p>
+        </section>
+
+        <section class="summary-strip" aria-label="Decision summary">
+          <div>
+            <span class="summary-icon" aria-hidden="true">◇</span>
+            <p>Overall Risk</p>
+            <strong>Medium</strong>
+          </div>
+          <div>
+            <span class="summary-icon" aria-hidden="true">✧</span>
+            <p>Confidence</p>
+            <strong>Low-Medium</strong>
+          </div>
+        </section>
+
+        <section class="key-factors" aria-labelledby="factors-title">
+          <h2 id="factors-title"><span></span>Key Factors<span></span></h2>
+          <dl class="factor-list">
+            <div class="factor concealment">
+              <dt>
+                <span class="factor-icon" aria-hidden="true">◉</span>
+                Concealment
+              </dt>
+              <dd>Partly hidden</dd>
+            </div>
+            <div class="factor ground">
+              <dt>
+                <span class="factor-icon" aria-hidden="true">⌁</span>
+                Ground
+              </dt>
+              <dd>Unstable / uncertain</dd>
+            </div>
+            <div class="factor resources">
+              <dt>
+                <span class="factor-icon" aria-hidden="true">◒</span>
+                Resources
+              </dt>
+              <dd>Limited</dd>
+            </div>
+            <div class="factor danger">
+              <dt>
+                <span class="factor-icon" aria-hidden="true">△</span>
+                Danger signs
+              </dt>
+              <dd>Unclear tracks nearby</dd>
+            </div>
+            <div class="factor condition">
+              <dt>
+                <span class="factor-icon" aria-hidden="true">✦</span>
+                Group condition
+              </dt>
+              <dd>Tired</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="notice" aria-labelledby="notice-title">
+          <h2 id="notice-title">Notice</h2>
+          <p>Some information may be incomplete. Use this recommendation as guidance, not certainty.</p>
+        </section>
+
+        <section class="actions" aria-labelledby="actions-title">
+          <h2 id="actions-title"><span></span>Next Actions<span></span></h2>
+          <div class="action-list">
+            <button class="action recommended" type="button">Rest briefly</button>
+            <button class="action" type="button">Move on</button>
+            <button class="action risky" type="button">Rest here</button>
+            <button class="action" type="button">Search next location</button>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
