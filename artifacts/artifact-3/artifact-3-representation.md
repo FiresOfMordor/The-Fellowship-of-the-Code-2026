@@ -29,16 +29,16 @@ The implementation follows the wireframe from Assignment 2, while also addressin
 
 ### How our design supports the intent and value from Assignment 1
 
-This interface supports the intent of the Shire Guide by helping the Fellowship make safer resting decisions in unfamiliar terrain. The static page makes the current decision, the recommendation, and the most relevant supporting factors visible at a glance. This supports the value from Assignment 1 by reducing poor decisions under uncertainty and by giving the group a shared basis for judgment.
+This interface supports the intent of the Shire Guide by helping the Fellowship make safer resting decisions in unfamiliar terrain. The page makes the decision context, the recommendation, and the most relevant supporting factors visible at a glance, so the group can judge whether rest is appropriate. This supports the value from Assignment 1 by reducing poor decisions under uncertainty and by giving the Fellowship a shared basis for action.
 
 ### How it reflects the wireframe from Assignment 2
 
-The implementation keeps the core structure of the wireframe: location, recommendation, key factors, notice, and next actions. At the same time, we improved the hierarchy based on the feedback from Assignment 2 by making the system identity visible, adding a back button, and giving the main recommendation much stronger visual emphasis. The result stays consistent with the earlier design, but expresses it more clearly as an interface.
+The implementation keeps the core structure of the wireframe: location, recommendation, key factors, notice, and next actions. At the same time, we refined the hierarchy based on the feedback from Assignment 2 by making the system identity clearer, adding a back button, giving the location more visual weight, and making the main recommendation more prominent. The wording “Rest under guard” also reflects the improved flow logic more directly than the earlier phrasing.
 
 ### What we deliberately did not implement yet
 
-We deliberately did not implement any behavior, search logic, scoring logic, or dynamic updates. We also left out interactive map behavior and more complex flows, because this assignment focuses on static representation through HTML and CSS rather than functionality. The page therefore communicates structure and intent without pretending to be a finished application.
+We deliberately did not implement any dynamic behavior, scoring logic, search functionality, or route logic. We also kept the Home button as a static navigation element and did not turn the page into a full multi-screen application. This keeps the artifact aligned with the assignment, which focuses on static representation through HTML and CSS rather than functionality.
 
 ### Which assumptions and constraints shaped our decisions
 
-We assumed that the Fellowship needs to understand the situation quickly and under uncertainty. The main constraints were static implementation only, no JavaScript, no backend, and a strong focus on structure, readability, and semantic grouping. For that reason, the interface uses a compact mobile-like layout, highlights the recommendation clearly, and keeps uncertainty visible through the notice and confidence summary.
+We assumed that the Fellowship needs to understand the situation quickly and under uncertainty. The main constraints were static implementation only, no JavaScript, no backend, and a strong focus on structure, hierarchy, and readability. For that reason, the interface uses a compact mobile-like layout, a highly visible recommendation card, grouped factors, and a secondary Home button that leads back to the main menu of the Shire Guide without competing with the actual decision actions.
