@@ -19,7 +19,7 @@ At this stage of the journey, the Fellowship is moving through unfamiliar terrai
 
 ### Short Description
 
-This static interface represents the **Camp Suitability Check** as a clear and structured screen for the Fellowship. It focuses on one concrete decision: whether the group should rest here, rest briefly with caution, or move on.
+This static interface represents the Camp Suitability Check as a clear and structured screen for the Fellowship. It focuses on one concrete decision: whether the group should rest here, rest briefly with caution, or move on.
 
 The implementation follows the wireframe from Assignment 2, while also addressing the feedback received on that design. In particular, it makes the overall system identity more visible, includes a back button, and gives the main recommendation a stronger visual priority.
 
