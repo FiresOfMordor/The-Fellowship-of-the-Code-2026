@@ -25,7 +25,7 @@ We continued with the same capability from Assignment 2, Support Resting and Cam
 - [artifacts/artifact-3/src/interface.html](../artifacts/artifact-3/src/interface.html)  
 - [artifacts/artifact-3/src/style.css](../artifacts/artifact-3/src/style.css)
 
-**Focus:** Selected system capability, static HTML interface, CSS styling, and short design rationale for **Camp Suitability Check**
+**Focus:** Selected system capability, static HTML interface, CSS styling, and short design rationale for Camp Suitability Check
 
 - The artifact reuses the capability Support Resting and Camp Decisions from Assignment 2.
 - The interface represents one clear decision situation: whether the Fellowship should rest under guard, rest here, continue the journey, or search for a better camp.
