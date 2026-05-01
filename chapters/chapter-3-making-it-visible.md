@@ -21,6 +21,7 @@ We continued with the same capability from Assignment 2, Support Resting and Cam
 ## Artifact
 
 **File:** [artifacts/artifact-3/artifact-3-representation.md](../artifacts/artifact-3/artifact-3-representation.md)  
+
 **Supporting files:**  
 - [artifacts/artifact-3/src/interface.html](../artifacts/artifact-3/src/interface.html)  
 - [artifacts/artifact-3/src/style.css](../artifacts/artifact-3/src/style.css)
