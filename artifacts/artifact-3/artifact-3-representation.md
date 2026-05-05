@@ -29,7 +29,7 @@ The implementation follows the wireframe from Assignment 2, while also addressin
 
 ### How our design supports the intent and value from Assignment 1
 
-This interface supports the intent of the Shire Guide by helping the Fellowship make safer resting decisions in unfamiliar terrain. The page makes the decision context, the recommendation, and the most relevant supporting factors visible at a glance, so the group can judge whether rest is appropriate. This supports the value from Assignment 1 by reducing poor decisions under uncertainty and by giving the Fellowship a shared basis for action.
+This interface supports the intent of the Shire Guide by helping the Fellowship make safer resting decisions in unfamiliar terrain. The recommendation card is the most visually prominent element on the page, ensuring the group sees the suggested action first; the Key Factors and Notice sections then expose the reasoning and the limits of that reasoning. Surfacing both the recommendation and the uncertainty around it reflects the value from Assignment 1: reducing poor decisions under incomplete information by giving the Fellowship a shared, structured basis for action rather than relying on individual intuition.
 
 ### How it reflects the wireframe from Assignment 2
 
@@ -37,8 +37,8 @@ The implementation keeps the core structure of the wireframe: location, recommen
 
 ### What we deliberately did not implement yet
 
-We deliberately did not implement any dynamic behavior, scoring logic, search functionality, or route logic. This keeps the artifact aligned with the assignment, which focuses on static representation through HTML and CSS rather than functionality.
+We deliberately did not implement any dynamic behavior, scoring logic, or navigation between screens. The recommendation, risk and confidence levels, factor values, and gauge fill angles are all hardcoded for the Midgewater Marshes scenario rather than computed from inputs — the gauges visualize what would be scored output in the full capability. The wireframe also includes a tappable info marker on each gauge that would expose the underlying score breakdown; we kept this concept in our design intent but did not render it visually, since without the dynamic content it would point to, it would only add visual noise. This keeps the artifact aligned with the assignment, which focuses on static representation through HTML and CSS rather than functionality.
 
 ### Which assumptions and constraints shaped our decisions
 
-We assumed that the Fellowship needs to understand the situation quickly and under uncertainty. The main constraints were static implementation only, no JavaScript, no backend, and a strong focus on structure, hierarchy, and readability. For that reason, the interface uses a compact mobile-like layout, a highly visible recommendation card and grouped factors.
+We assumed that the Fellowship needs to understand the situation quickly and under uncertainty, on a small screen, with limited time to read. The main constraints were static implementation only — no JavaScript, no backend, no libraries — and a focus on structure, hierarchy, and readability over functionality. For that reason, the interface uses a compact mobile-like layout, a highly visible recommendation card, grouped factors with consistent visual treatment, and a small set of clearly labeled actions. 
