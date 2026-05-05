@@ -37,8 +37,8 @@ The implementation keeps the core structure of the wireframe: location, recommen
 
 ### What we deliberately did not implement yet
 
-We deliberately did not implement any dynamic behavior, scoring logic, search functionality, or route logic. We also kept the Home button as a static navigation element and did not turn the page into a full multi-screen application. This keeps the artifact aligned with the assignment, which focuses on static representation through HTML and CSS rather than functionality.
+We deliberately did not implement any dynamic behavior, scoring logic, search functionality, or route logic. This keeps the artifact aligned with the assignment, which focuses on static representation through HTML and CSS rather than functionality.
 
 ### Which assumptions and constraints shaped our decisions
 
-We assumed that the Fellowship needs to understand the situation quickly and under uncertainty. The main constraints were static implementation only, no JavaScript, no backend, and a strong focus on structure, hierarchy, and readability. For that reason, the interface uses a compact mobile-like layout, a highly visible recommendation card, grouped factors, and a secondary Home button that leads back to the main menu of the Shire Guide without competing with the actual decision actions.
+We assumed that the Fellowship needs to understand the situation quickly and under uncertainty. The main constraints were static implementation only, no JavaScript, no backend, and a strong focus on structure, hierarchy, and readability. For that reason, the interface uses a compact mobile-like layout, a highly visible recommendation card and grouped factors.
