@@ -78,8 +78,8 @@ We are the team **FiresOfMordor**, a group of students working together on the j
 - 2026-04-17: Added wireframe for Artifact II
 - 2026-04-17: Updated README for Phase 2 focus
 - 2026-04-17: Added Chapter II in The Red Book
-- 2026-05-01: Added Artifact III (`artifact-3-representation.md`)
-- 2026-05-01: Added static HTML interface for Artifact III
-- 2026-05-01: Added CSS styling for Artifact III
-- 2026-05-01: Updated README for Phase 3 focus
-- 2026-05-01: Added Chapter III in The Red Book
+- 2026-05-05: Added Artifact III (`artifact-3-representation.md`)
+- 2026-05-05: Added static HTML interface for Artifact III
+- 2026-05-05: Added CSS styling for Artifact III
+- 2026-05-05: Updated README for Phase 3 focus
+- 2026-05-05: Added Chapter III in The Red Book
