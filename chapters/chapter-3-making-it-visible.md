@@ -8,7 +8,7 @@ This chapter documents our work on Artifact III – Representation: Camp Suitabi
 
 In this phase, we moved from design to representation. Instead of refining the flow or wireframe further, we translated the selected capability into a static HTML + CSS interface that expresses structure, hierarchy, and intent without adding behavior or implementation logic.
 
-We continued with the same capability from Assignment 2, Support Resting and Camp Decisions, and implemented it as a mobile-like screen for the Fellowship in the Midgewater Marshes. During this step, we also refined parts of the interface to better match the updated decision logic: the location was made more prominent, the recommendation was made more concrete as “Rest under guard”, and a secondary Home button was added at the bottom to return to the main menu of The Shire Guide. These changes helped us make the screen clearer both as a decision interface and as part of a larger system.
+We continued with the same capability from Assignment 2, Support Resting and Camp Decisions, and implemented it as a mobile-like screen for the Fellowship in the Midgewater Marshes. During this step, we also refined parts of the interface to better match the updated decision logic: the location was made more prominent and the recommendation was made more concrete as “Rest under guard”. These changes helped us make the screen clearer both as a decision interface and as part of a larger system.
 
 ### Learning Outcomes
 
@@ -31,7 +31,6 @@ We continued with the same capability from Assignment 2, Support Resting and Cam
 - The interface represents one clear decision situation: whether the Fellowship should rest under guard, rest here, continue the journey, or search for a better camp.
 - The HTML implementation uses semantic structure such as `header`, `main`, `section`, headings, a definition list for key factors, and buttons for the visible actions.
 - The CSS implementation strengthens hierarchy and readability through a compact mobile-like layout, a prominent recommendation card, grouped factors, and a Shire-inspired visual style.
-- The updated version also makes the location more prominent and adds a secondary Home button that leads back to the main menu of The Shire Guide.
 
 ## AI Assistance
 
@@ -40,7 +39,7 @@ We used AI mainly to support structure, wording, and the transition from wirefra
 - AI helped us decide how to translate the wireframe into a clearer and more consistent HTML structure.
 - We also used AI directly to help generate and refine parts of the HTML and CSS code for the static interface.
 - It supported us in reflecting on the feedback from Assignment 2, especially the need for stronger system identification, a back button, and a more prominent recommendation.
-- During later revisions, AI also helped us think through how to refine the wording of the recommendation and how to add a Home button without confusing it with the main decision actions.
+- During later revisions, AI also helped us think through how to refine the wording of the recommendation
 - Some AI suggestions were visually more ambitious than necessary, so we had to keep the implementation aligned with the assignment requirement of a static, structured interface rather than a fully designed application.
 - AI was also useful when refining labels, navigation wording, and design rationale, but the final decisions about hierarchy, scope, and consistency were made by us.
 
