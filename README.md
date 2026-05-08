@@ -82,4 +82,4 @@ We are the team **FiresOfMordor**, a group of students working together on the j
 - 2026-05-05: Added static HTML interface for Artifact III
 - 2026-05-05: Added CSS styling for Artifact III
 - 2026-05-05: Updated README for Phase 3 focus
-- 2026-05-05: Added Chapter III in The Red Book
+- 2026-05-08: Added Chapter III in The Red Book
