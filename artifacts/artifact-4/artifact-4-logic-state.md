@@ -7,7 +7,6 @@ TODO: Beschreibe hier den Zweck dieses Artifacts.
 ## Files
 
 Supporting code is stored in:
-
-- `src/interface.html`
-- `src/style.css`
-- `src/logic.js`
+- [artifacts/artifact-4/src/interface.html](../artifacts/artifact-4/src/interface.html)
+- [artifacts/artifact-4/src/style.css](../artifacts/artifact-4/src/style.css)
+- [artifacts/artifact-4/src/logic.js](../artifacts/artifact-4/src/logic.js)
