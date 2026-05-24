@@ -498,3 +498,58 @@ a {
     border-radius: 0.75rem;
   }
 }
+.metric-bar {
+  width: 100%;
+  height: 0.55rem;
+  margin-top: 0.45rem;
+  overflow: hidden;
+  border: 1px solid rgba(117, 83, 39, 0.5);
+  border-radius: 999px;
+  background: rgba(117, 83, 39, 0.16);
+}
+
+.metric-bar-fill {
+  display: block;
+  width: 0%;
+  height: 100%;
+  background: var(--gold);
+  transition: width 700ms ease;
+}
+
+.metric-detail {
+  min-height: 2.4rem;
+  margin: 0.35rem 0 0;
+  color: var(--muted-ink);
+  font-size: 0.82rem;
+  font-style: italic;
+  line-height: 1.35;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.summary-strip > div {
+  cursor: pointer;
+}
+
+.summary-strip > div.is-active {
+  border-color: var(--gold);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.5),
+    0 0 0 3px rgba(167, 122, 50, 0.22);
+}
+
+.system-feedback {
+  margin: 0.75rem 0 0;
+  padding: 0.7rem 0.75rem;
+  color: var(--muted-ink);
+  font-size: 0.92rem;
+  font-style: italic;
+  line-height: 1.4;
+  border-left: 4px solid var(--gold);
+  background: rgba(255, 248, 229, 0.7);
+}
+
+.action.is-selected {
+  outline: 3px solid rgba(167, 122, 50, 0.45);
+  outline-offset: 2px;
+}
