@@ -6,7 +6,6 @@
 
 ## Artifact
 **File:** [artifacts/artifact-4/artifact-4-logic-state.md](../artifacts/artifact-4/artifact-4-logic-state.md)
-
 **Supporting files:**
 - [artifacts/artifact-4/src/interface.html](../artifacts/artifact-4/src/interface.html)
 - [artifacts/artifact-4/src/style.css](../artifacts/artifact-4/src/style.css)
