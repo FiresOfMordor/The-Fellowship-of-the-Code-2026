@@ -89,7 +89,16 @@ if (overallRiskCard) {
 if (confidenceCard) {
   confidenceCard.appendChild(confidenceBar.bar);
 }
+const metricHint = document.createElement("p");
+metricHint.className = "metric-hint";
+metricHint.textContent =
+  "Tap Overall Risk or Confidence to inspect the reasoning.";
 
+const summaryStrip = document.querySelector(".summary-strip");
+
+if (summaryStrip) {
+  summaryStrip.insertAdjacentElement("afterend", metricHint);
+}
 // -----------------------------
 // 5. BACK BUTTON
 // -----------------------------
