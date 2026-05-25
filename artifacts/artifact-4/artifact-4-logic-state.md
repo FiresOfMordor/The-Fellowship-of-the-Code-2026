@@ -22,6 +22,7 @@ The system gives the Fellowship a shared and explainable basis for deciding whet
 
 ## 2. Add Logic & State
 
+### Short Description
 The static interface from Assignment 3 was extended with plain JavaScript. The implementation introduces an explicit state model for the current camp situation, evaluates this state through simple decision rules, and updates the visible interface when the Fellowship explores risk details, confidence details, or selects an action.
 
 The HTML structure was kept close to the previous static interface. Only the necessary identifiers and `data-action` attributes were added so that JavaScript can update the interface without changing the overall design. The CSS remains mostly unchanged and only supports the visible states created by the logic.
