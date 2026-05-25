@@ -16,7 +16,7 @@
   <body>
     <div class="page-frame">
       <header class="top-bar" aria-label="Screen header">
-        <button class="back-button" type="button" aria-label="Go back">
+        <button class="back-button" type="button" aria-label="Reset screen state">
           Back
         </button>
 
@@ -121,9 +121,14 @@
         <section class="key-factors" aria-labelledby="factors-title">
           <h2 id="factors-title"><span></span>Key Factors<span></span></h2>
 
-          <dl class="factor-list">
-            <div class="factor concealment">
-              <dt>
+          <div class="factor-list">
+            <button
+              class="factor concealment"
+              type="button"
+              data-factor="concealment"
+              aria-label="Show concealment details"
+            >
+              <span class="factor-label">
                 <span class="factor-icon" aria-hidden="true">
                   <svg
                     viewBox="0 0 24 24"
@@ -140,12 +145,17 @@
                   </svg>
                 </span>
                 Concealment
-              </dt>
-              <dd id="factor-concealment">Partly hidden</dd>
-            </div>
+              </span>
+              <span class="factor-value" id="factor-concealment">Partly hidden</span>
+            </button>
 
-            <div class="factor ground">
-              <dt>
+            <button
+              class="factor ground"
+              type="button"
+              data-factor="ground"
+              aria-label="Show ground details"
+            >
+              <span class="factor-label">
                 <span class="factor-icon" aria-hidden="true">
                   <svg
                     viewBox="0 0 24 24"
@@ -161,12 +171,17 @@
                   </svg>
                 </span>
                 Ground
-              </dt>
-              <dd id="factor-ground">Unstable / uncertain</dd>
-            </div>
+              </span>
+              <span class="factor-value" id="factor-ground">Unstable / uncertain</span>
+            </button>
 
-            <div class="factor resources">
-              <dt>
+            <button
+              class="factor resources"
+              type="button"
+              data-factor="resources"
+              aria-label="Show resources details"
+            >
+              <span class="factor-label">
                 <span class="factor-icon" aria-hidden="true">
                   <svg
                     viewBox="0 0 24 24"
@@ -182,12 +197,17 @@
                   </svg>
                 </span>
                 Resources
-              </dt>
-              <dd id="factor-resources">Limited</dd>
-            </div>
+              </span>
+              <span class="factor-value" id="factor-resources">Limited</span>
+            </button>
 
-            <div class="factor danger">
-              <dt>
+            <button
+              class="factor danger"
+              type="button"
+              data-factor="dangerSigns"
+              aria-label="Show danger signs details"
+            >
+              <span class="factor-label">
                 <span class="factor-icon" aria-hidden="true">
                   <svg
                     viewBox="0 0 24 24"
@@ -209,12 +229,17 @@
                   </svg>
                 </span>
                 Danger signs
-              </dt>
-              <dd id="factor-danger">Unclear tracks nearby</dd>
-            </div>
+              </span>
+              <span class="factor-value" id="factor-danger">Unclear tracks nearby</span>
+            </button>
 
-            <div class="factor condition">
-              <dt>
+            <button
+              class="factor condition"
+              type="button"
+              data-factor="groupCondition"
+              aria-label="Show group condition details"
+            >
+              <span class="factor-label">
                 <span class="factor-icon" aria-hidden="true">
                   <svg
                     viewBox="0 0 24 24"
@@ -230,10 +255,10 @@
                   </svg>
                 </span>
                 Group condition
-              </dt>
-              <dd id="factor-condition">Tired</dd>
-            </div>
-          </dl>
+              </span>
+              <span class="factor-value" id="factor-condition">Tired</span>
+            </button>
+          </div>
         </section>
 
         <section class="notice" aria-labelledby="notice-title">
