@@ -20,9 +20,14 @@ This capability matters because the Fellowship is moving through the Midgewater 
 
 The system gives the Fellowship a shared and explainable basis for deciding whether to rest, rest under guard, search for a better camp, or continue the journey. This reduces the risk of poor decisions under incomplete information while keeping the final decision with the group.
 
-## Files
+## 2. Add Logic & State
 
-Supporting code is stored in:
-- [src/interface.html](./src/interface.html)
-- [src/style.css](./src/style.css)
-- [src/logic.js](./src/logic.js)
+The static interface from Assignment 3 was extended with plain JavaScript. The implementation introduces an explicit state model for the current camp situation, evaluates this state through simple decision rules, and updates the visible interface when the Fellowship explores risk details, confidence details, or selects an action.
+
+The HTML structure was kept close to the previous static interface. Only the necessary identifiers and `data-action` attributes were added so that JavaScript can update the interface without changing the overall design. The CSS remains mostly unchanged and only supports the visible states created by the logic.
+
+Files:
+
+- [Updated HTML interface](./src/interface.html)
+- [Updated CSS stylesheet](./src/style.css)
+- [JavaScript logic and state](./src/logic.js)
