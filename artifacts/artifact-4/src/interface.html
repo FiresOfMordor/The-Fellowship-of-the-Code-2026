@@ -12,10 +12,14 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <div class="page-frame">
       <header class="top-bar" aria-label="Screen header">
-        <button class="back-button" type="button" aria-label="Go back">Back</button>
+        <button class="back-button" type="button" aria-label="Go back">
+          Back
+        </button>
+
         <div class="system-mark" aria-label="System identity">
           <p class="companion-name">The Fellowship Companion</p>
           <p class="guide-name">The Shire Guide</p>
@@ -32,60 +36,125 @@
 
         <section class="recommendation" aria-labelledby="recommendation-title">
           <div class="tree-mark" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 3l2.5 5.5 6 .8-4.5 4.2 1.2 6L12 16.8 6.8 19.5 8 13.5 3.5 9.3l6-.8z" />
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M12 3l2.5 5.5 6 .8-4.5 4.2 1.2 6L12 16.8 6.8 19.5 8 13.5 3.5 9.3l6-.8z"
+              />
             </svg>
           </div>
+
           <div>
             <p class="section-label">Recommended Action</p>
             <h2 id="recommendation-title">Rest under guard</h2>
-            <p class="confidence">Current risk: Medium</p>
+            <p class="confidence" id="risk-summary">Current risk: Medium</p>
           </div>
-          <p class="recommendation-copy">
-            The location offers partial concealment, but the ground is uncertain and signs of danger are unclear.
+
+          <p class="recommendation-copy" id="recommendation-copy">
+            The location offers partial concealment, but the ground is uncertain
+            and signs of danger are unclear.
           </p>
         </section>
 
         <section class="summary-strip" aria-label="Decision summary">
-          <div>
+          <button
+            class="summary-card"
+            id="risk-card"
+            type="button"
+            aria-label="Show overall risk details"
+          >
             <p>Overall Risk</p>
             <svg class="gauge" viewBox="0 0 56 30" aria-hidden="true">
-              <path d="M4 26 A 24 24 0 0 1 52 26" fill="none" stroke="rgba(117,83,39,0.28)" stroke-width="4" stroke-linecap="round" />
-              <path d="M4 26 A 24 24 0 0 1 28 2" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+              <path
+                d="M4 26 A 24 24 0 0 1 52 26"
+                fill="none"
+                stroke="rgba(117,83,39,0.28)"
+                stroke-width="4"
+                stroke-linecap="round"
+              />
+              <path
+                d="M4 26 A 24 24 0 0 1 28 2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="4"
+                stroke-linecap="round"
+              />
               <circle cx="28" cy="2" r="2.6" fill="currentColor" />
             </svg>
-            <strong>Medium</strong>
-          </div>
-          <div>
+            <strong id="overall-risk-label">Medium</strong>
+          </button>
+
+          <button
+            class="summary-card"
+            id="confidence-card"
+            type="button"
+            aria-label="Show confidence details"
+          >
             <p>Confidence</p>
             <svg class="gauge" viewBox="0 0 56 30" aria-hidden="true">
-              <path d="M4 26 A 24 24 0 0 1 52 26" fill="none" stroke="rgba(117,83,39,0.28)" stroke-width="4" stroke-linecap="round" />
-              <path d="M4 26 A 24 24 0 0 1 16 6" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+              <path
+                d="M4 26 A 24 24 0 0 1 52 26"
+                fill="none"
+                stroke="rgba(117,83,39,0.28)"
+                stroke-width="4"
+                stroke-linecap="round"
+              />
+              <path
+                d="M4 26 A 24 24 0 0 1 16 6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="4"
+                stroke-linecap="round"
+              />
               <circle cx="16" cy="6" r="2.6" fill="currentColor" />
             </svg>
-            <strong>Low-Medium</strong>
-          </div>
+            <strong id="confidence-label">Low-Medium</strong>
+          </button>
         </section>
 
         <section class="key-factors" aria-labelledby="factors-title">
           <h2 id="factors-title"><span></span>Key Factors<span></span></h2>
+
           <dl class="factor-list">
             <div class="factor concealment">
               <dt>
                 <span class="factor-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12z" />
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12z"
+                    />
                     <circle cx="12" cy="12" r="3" />
                   </svg>
                 </span>
                 Concealment
               </dt>
-              <dd>Partly hidden</dd>
+              <dd id="factor-concealment">Partly hidden</dd>
             </div>
+
             <div class="factor ground">
               <dt>
                 <span class="factor-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
                     <path d="M3 7c2 1 3 1 5 0s3-1 5 0 3 1 5 0 2-.5 3-1" />
                     <path d="M3 13c2 1 3 1 5 0s3-1 5 0 3 1 5 0 2-.5 3-1" />
                     <path d="M3 19c2 1 3 1 5 0s3-1 5 0 3 1 5 0 2-.5 3-1" />
@@ -93,59 +162,124 @@
                 </span>
                 Ground
               </dt>
-              <dd>Unstable / uncertain</dd>
+              <dd id="factor-ground">Unstable / uncertain</dd>
             </div>
+
             <div class="factor resources">
               <dt>
                 <span class="factor-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 3c-3 4-6 7.5-6 11a6 6 0 0 0 12 0c0-3.5-3-7-6-11z" />
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M12 3c-3 4-6 7.5-6 11a6 6 0 0 0 12 0c0-3.5-3-7-6-11z"
+                    />
                   </svg>
                 </span>
                 Resources
               </dt>
-              <dd>Limited</dd>
+              <dd id="factor-resources">Limited</dd>
             </div>
+
             <div class="factor danger">
               <dt>
                 <span class="factor-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
                     <path d="M12 3 2.5 20h19L12 3z" />
                     <path d="M12 10v5" />
-                    <circle cx="12" cy="17.6" r="0.6" fill="currentColor" stroke="none" />
+                    <circle
+                      cx="12"
+                      cy="17.6"
+                      r="0.6"
+                      fill="currentColor"
+                      stroke="none"
+                    />
                   </svg>
                 </span>
                 Danger signs
               </dt>
-              <dd>Unclear tracks nearby</dd>
+              <dd id="factor-danger">Unclear tracks nearby</dd>
             </div>
+
             <div class="factor condition">
               <dt>
                 <span class="factor-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 20.5s-7-4.4-7-10A4.5 4.5 0 0 1 12 6.8 4.5 4.5 0 0 1 19 10.5c0 5.6-7 10-7 10z" />
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M12 20.5s-7-4.4-7-10A4.5 4.5 0 0 1 12 6.8 4.5 4.5 0 0 1 19 10.5c0 5.6-7 10-7 10z"
+                    />
                   </svg>
                 </span>
                 Group condition
               </dt>
-              <dd>Tired</dd>
+              <dd id="factor-condition">Tired</dd>
             </div>
           </dl>
         </section>
 
-       
+        <section class="notice" aria-labelledby="notice-title">
+          <h2 id="notice-title">Notice</h2>
+          <p id="notice-text">
+            The assessment is based on incomplete signs. The Fellowship should
+            remain cautious and keep watch if resting here.
+          </p>
+        </section>
 
         <section class="actions" aria-labelledby="actions-title">
           <h2 id="actions-title"><span></span>Choose the next Action<span></span></h2>
+
           <div class="action-list">
-            <button class="action recommended" type="button">Rest under guard</button>
-            <button class="action risky" type="button">Rest here</button>
-            <button class="action" type="button">Search for a better camp</button>
-            <button class="action" type="button">Continue the journey</button>
+            <button
+              class="action recommended"
+              type="button"
+              data-action="rest-under-guard"
+            >
+              Rest under guard
+            </button>
+
+            <button class="action risky" type="button" data-action="rest-here">
+              Rest here
+            </button>
+
+            <button
+              class="action"
+              type="button"
+              data-action="search-better-camp"
+            >
+              Search for a better camp
+            </button>
+
+            <button class="action" type="button" data-action="continue-journey">
+              Continue the journey
+            </button>
           </div>
+
+          <p class="system-feedback" id="system-feedback" aria-live="polite">
+            No action selected yet.
+          </p>
         </section>
       </main>
     </div>
- <script src="logic.js"></script>
+
+    <script src="logic.js"></script>
   </body>
 </html>
