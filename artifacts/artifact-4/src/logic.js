@@ -36,7 +36,6 @@ function evaluateCamp(state) {
       ground:
         "Unstable marsh soil can slow the group down, make resting unsafe, and leave visible traces.",
       resources:
-        resources:
         "Due to limited resources, a longer stay is not recommended.",
       dangerSigns:
         "Unclear tracks nearby cannot be interpreted with confidence, so the group should assume possible risk.",
