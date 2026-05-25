@@ -5,11 +5,9 @@
 :root {
   --parchment: #efe0bd;
   --parchment-light: #fbf1d7;
-  --parchment-deep: #d7bc82;
   --ink: #2b2116;
   --muted-ink: #6c5739;
   --green: #203b25;
-  --green-soft: #d9e1cc;
   --gold: #a77a32;
   --gold-light: #d8ba74;
   --brown: #755327;
@@ -95,10 +93,8 @@ button {
   min-height: 2.25rem;
   padding: 0 0.78rem 0 0.64rem;
   color: var(--green);
-  font-family: var(--font-serif);
   font-size: 0.9rem;
   font-weight: 600;
-  text-decoration: none;
   cursor: pointer;
   border: 1px solid rgba(117, 83, 39, 0.58);
   border-radius: 0.2rem;
@@ -130,7 +126,6 @@ button {
 
 .companion-name {
   color: var(--muted-ink);
-  font-family: var(--font-serif);
   font-size: 0.74rem;
   font-weight: 600;
   font-style: italic;
@@ -170,7 +165,6 @@ button {
   align-items: center;
   margin: 0.3rem 0 0;
   color: var(--green);
-  font-family: var(--font-serif);
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -189,7 +183,6 @@ button {
   font-size: 2.18rem;
   font-weight: 600;
   line-height: 1;
-  letter-spacing: 0.005em;
 }
 
 .decision-question {
@@ -198,7 +191,6 @@ button {
   gap: 0.5rem;
   align-items: center;
   margin: 0.8rem 0 0;
-  color: var(--ink);
   font-size: 1.12rem;
   font-style: italic;
   font-weight: 500;
@@ -228,16 +220,6 @@ button {
   box-shadow: inset 0 0 0 1px rgba(28, 19, 8, 0.8), 0 10px 22px rgba(47, 35, 14, 0.24);
 }
 
-.recommendation::after {
-  grid-column: 1 / -1;
-  justify-self: center;
-  width: 54%;
-  height: 1px;
-  margin-top: -0.15rem;
-  content: "";
-  background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
-}
-
 .tree-mark {
   display: grid;
   place-items: center;
@@ -257,7 +239,6 @@ button {
 .section-label {
   margin: 0;
   color: var(--gold-light);
-  font-family: var(--font-serif);
   font-size: 0.74rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -269,13 +250,11 @@ button {
   font-size: 1.85rem;
   font-weight: 600;
   line-height: 1.04;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
 }
 
 .confidence {
   margin: 0.45rem 0 0;
   color: #ead08a;
-  font-family: var(--font-serif);
   font-size: 0.95rem;
   font-style: italic;
   font-weight: 500;
@@ -285,9 +264,7 @@ button {
   grid-column: 1 / -1;
   margin: 0;
   color: rgba(255, 246, 220, 0.92);
-  font-family: var(--font-serif);
   font-size: 0.96rem;
-  font-weight: 400;
   line-height: 1.5;
 }
 
@@ -317,7 +294,6 @@ button {
   gap: 0.4rem;
   padding: 0.85rem 0.75rem;
   color: var(--gold);
-  font-family: var(--font-serif);
   text-align: center;
   cursor: pointer;
 }
@@ -337,7 +313,6 @@ button {
 .summary-card p {
   margin: 0;
   color: var(--muted-ink);
-  font-family: var(--font-serif);
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -350,6 +325,22 @@ button {
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+}
+
+.inline-info {
+  display: none;
+  margin-top: 0.55rem;
+  padding-top: 0.55rem;
+  color: var(--muted-ink);
+  font-size: 0.86rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.35;
+  border-top: 1px solid rgba(117, 83, 39, 0.32);
+}
+
+.is-open > .inline-info {
+  display: block;
 }
 
 .key-factors,
@@ -365,7 +356,6 @@ button {
   gap: 0.6rem;
   align-items: center;
   margin: 0 0 0.8rem;
-  color: var(--ink);
   font-size: 1.05rem;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -386,15 +376,11 @@ button {
 }
 
 .factor {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 0.75rem;
-  align-items: center;
   width: 100%;
-  min-height: 3.75rem;
+  display: grid;
+  gap: 0.45rem;
   padding: 0.52rem 0.65rem;
   color: var(--ink);
-  font-family: var(--font-serif);
   text-align: left;
   cursor: pointer;
   border: 1px solid rgba(117, 83, 39, 0.42);
@@ -408,12 +394,18 @@ button {
   border-color: rgba(32, 59, 37, 0.72);
 }
 
+.factor-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.75rem;
+  align-items: center;
+}
+
 .factor-label {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0.65rem;
   align-items: center;
-  color: var(--ink);
   font-size: 1.05rem;
   font-weight: 600;
 }
@@ -438,7 +430,6 @@ button {
 .factor-value {
   max-width: 8.5rem;
   color: var(--muted-ink);
-  font-family: var(--font-serif);
   font-size: 0.92rem;
   font-style: italic;
   font-weight: 500;
@@ -463,16 +454,13 @@ button {
   color: var(--brown);
   font-size: 1.05rem;
   font-weight: 600;
-  letter-spacing: 0.06em;
 }
 
 .notice p {
   margin: 0;
   color: var(--muted-ink);
-  font-family: var(--font-serif);
   font-size: 0.95rem;
   font-style: italic;
-  font-weight: 400;
   line-height: 1.5;
 }
 
@@ -486,13 +474,12 @@ button {
   min-height: 2.75rem;
   padding: 0.62rem 0.8rem;
   color: var(--ink);
-  font-family: var(--font-serif);
   font-size: 1.14rem;
   font-weight: 600;
+  cursor: pointer;
   border: 2px double rgba(117, 83, 39, 0.72);
   border-radius: 0.22rem;
   background: rgba(255, 248, 229, 0.65);
-  cursor: pointer;
 }
 
 .action:hover {
@@ -517,7 +504,7 @@ button {
   box-shadow: 0 0 0 2px rgba(32, 59, 37, 0.18);
 }
 
-.system-feedback {
+.action-feedback {
   margin: 0.75rem 0 0;
   padding: 0.7rem 0.75rem;
   color: var(--muted-ink);
