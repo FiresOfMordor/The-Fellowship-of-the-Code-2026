@@ -1,6 +1,5 @@
 // Artifact 4: Logic & State – Camp Suitability Check
 
-// Explicit state model for the current camp situation.
 var campState = {
   groupCondition: "tired",
   concealment: "partial",
@@ -12,7 +11,6 @@ var campState = {
   openedPanel: null
 };
 
-// Derives the recommendation and UI messages from the current state.
 function evaluateCamp(state) {
   var needsRest =
     state.groupCondition === "tired" || state.groupCondition === "critical";
@@ -29,20 +27,20 @@ function evaluateCamp(state) {
     noticeText:
       "The assessment is based on incomplete signs. The Fellowship should remain cautious and keep watch if resting here.",
     riskDetails:
-      "Risk is medium because the Fellowship needs rest, but the ground is unstable and nearby danger signs are not fully clear.",
+      "Medium risk: the Fellowship needs rest, but the ground is unstable and nearby danger signs are not fully clear.",
     confidenceDetails:
-      "Confidence is low-medium because the Fellowship has only partial environmental information in the Midgewater Marshes.",
+      "Low-medium confidence: the Fellowship has only partial environmental information in the Midgewater Marshes.",
     factorDetails: {
       concealment:
-        "Concealment is only partial. The location hides the Fellowship from some directions, but it is not safe enough for an unguarded rest.",
+        "Partial concealment supports a short rest, but it is not enough for resting without a guard.",
       ground:
-        "The ground is unstable. Marsh soil can slow the group down, make resting uncomfortable, and increase the risk of leaving visible traces.",
+        "Unstable marsh soil can slow the group down, make resting unsafe, and leave visible traces.",
       resources:
-        "Resources are limited. The location does not offer enough useful supplies to strongly improve the value of resting here.",
+        "Limited resources mean this place does not strongly improve the value of stopping here.",
       dangerSigns:
-        "Danger signs are unclear. Tracks nearby cannot be interpreted with confidence, so the Fellowship should assume possible risk.",
+        "Unclear tracks nearby cannot be interpreted with confidence, so the group should assume possible risk.",
       groupCondition:
-        "The Fellowship is tired. Rest is relevant, but the group is not in a critical condition that would force stopping at any cost."
+        "The Fellowship is tired. Rest is relevant, but the group is not forced to stop at any cost."
     }
   };
 
@@ -71,40 +69,18 @@ function evaluateCamp(state) {
   return evaluation;
 }
 
-// Converts state values into readable interface labels.
 function formatFactor(value) {
-  if (value === "partial") {
-    return "Partly hidden";
-  }
-
-  if (value === "unstable") {
-    return "Unstable / uncertain";
-  }
-
-  if (value === "unclear") {
-    return "Unclear tracks nearby";
-  }
-
-  if (value === "limited") {
-    return "Limited";
-  }
-
-  if (value === "tired") {
-    return "Tired";
-  }
-
-  if (value === "critical") {
-    return "Critical";
-  }
-
-  if (value === "stable") {
-    return "Stable";
-  }
+  if (value === "partial") return "Partly hidden";
+  if (value === "unstable") return "Unstable / uncertain";
+  if (value === "unclear") return "Unclear tracks nearby";
+  if (value === "limited") return "Limited";
+  if (value === "tired") return "Tired";
+  if (value === "critical") return "Critical";
+  if (value === "stable") return "Stable";
 
   return value;
 }
 
-// Updates all visible UI elements based on the current state.
 function renderCampEvaluation() {
   var evaluation = evaluateCamp(campState);
 
@@ -140,47 +116,45 @@ function renderCampEvaluation() {
   updateSelectedAction();
 }
 
-// Shows an explanation when the user opens risk, confidence, or a key factor.
-function updateOpenedPanel(evaluation) {
-  var riskCard = document.querySelector("#risk-card");
-  var confidenceCard = document.querySelector("#confidence-card");
-  var factorButtons = document.querySelectorAll("[data-factor]");
-  var feedback = document.querySelector("#system-feedback");
+function clearInlineInformation() {
+  var openElements = document.querySelectorAll(".is-open");
+  var inlineInfos = document.querySelectorAll(".inline-info");
 
-  if (riskCard) {
-    riskCard.classList.remove("is-open");
-  }
-
-  if (confidenceCard) {
-    confidenceCard.classList.remove("is-open");
-  }
-
-  factorButtons.forEach(function (button) {
-    button.classList.remove("is-open");
+  openElements.forEach(function (element) {
+    element.classList.remove("is-open");
   });
 
+  inlineInfos.forEach(function (info) {
+    info.textContent = "";
+  });
+}
+
+function updateOpenedPanel(evaluation) {
+  clearInlineInformation();
+
   if (campState.openedPanel === "risk") {
+    var riskCard = document.querySelector("#risk-card");
+    var riskInfo = document.querySelector("#risk-info");
+
     riskCard.classList.add("is-open");
-    feedback.textContent = evaluation.riskDetails;
+    riskInfo.textContent = evaluation.riskDetails;
   } else if (campState.openedPanel === "confidence") {
+    var confidenceCard = document.querySelector("#confidence-card");
+    var confidenceInfo = document.querySelector("#confidence-info");
+
     confidenceCard.classList.add("is-open");
-    feedback.textContent = evaluation.confidenceDetails;
+    confidenceInfo.textContent = evaluation.confidenceDetails;
   } else if (evaluation.factorDetails[campState.openedPanel]) {
     var openedFactor = document.querySelector(
       '[data-factor="' + campState.openedPanel + '"]'
     );
+    var factorInfo = openedFactor.querySelector(".factor-info");
 
-    if (openedFactor) {
-      openedFactor.classList.add("is-open");
-    }
-
-    feedback.textContent = evaluation.factorDetails[campState.openedPanel];
-  } else if (campState.selectedAction === null) {
-    feedback.textContent = "No action selected yet.";
+    openedFactor.classList.add("is-open");
+    factorInfo.textContent = evaluation.factorDetails[campState.openedPanel];
   }
 }
 
-// Highlights the selected action button.
 function updateSelectedAction() {
   var actionButtons = document.querySelectorAll("[data-action]");
 
@@ -193,12 +167,13 @@ function updateSelectedAction() {
   });
 }
 
-// Updates the selected action and explains its consequence.
 function handleActionSelection(action) {
-  var feedback = document.querySelector("#system-feedback");
+  var feedback = document.querySelector("#action-feedback");
 
   campState.selectedAction = action;
   campState.openedPanel = null;
+
+  clearInlineInformation();
 
   if (action === "rest-under-guard") {
     feedback.textContent =
@@ -214,11 +189,9 @@ function handleActionSelection(action) {
       "Journey continuation selected. This avoids the current site, but the Fellowship remains tired.";
   }
 
-  updateOpenedPanel(evaluateCamp(campState));
   updateSelectedAction();
 }
 
-// Opens or closes the explanation panels.
 function togglePanel(panelName) {
   if (campState.openedPanel === panelName) {
     campState.openedPanel = null;
@@ -227,17 +200,22 @@ function togglePanel(panelName) {
   }
 
   campState.selectedAction = null;
+  document.querySelector("#action-feedback").textContent =
+    "No action selected yet.";
+
   renderCampEvaluation();
 }
 
-// Resets the local interaction state of this screen.
 function resetInterfaceState() {
   campState.selectedAction = null;
   campState.openedPanel = null;
+
+  document.querySelector("#action-feedback").textContent =
+    "No action selected yet.";
+
   renderCampEvaluation();
 }
 
-// Initializes all event listeners.
 function initializeInterface() {
   var riskCard = document.querySelector("#risk-card");
   var confidenceCard = document.querySelector("#confidence-card");
