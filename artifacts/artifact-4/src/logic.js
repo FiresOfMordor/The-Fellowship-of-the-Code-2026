@@ -1,217 +1,238 @@
-// logic.js
-// This file makes the Camp Suitability Check result page interactive.
-
-// -----------------------------
-// 1. STATE
-// -----------------------------
-// State means: the current information the page remembers.
-
-const campState = {
-  recommendation: "rest-under-guard",
-  overallRiskLevel: "Medium",
-  overallRiskValue: 60,
-  confidenceLevel: "Low-Medium",
-  confidenceValue: 45,
+// Explicit state model for the current camp situation.
+var campState = {
+  groupCondition: "tired",
+  concealment: "partial",
+  ground: "unstable",
+  dangerSigns: "unclear",
+  resources: "limited",
+  confidence: "low-medium",
   selectedAction: null,
   openedPanel: null
 };
 
-// -----------------------------
-// 2. FIND HTML ELEMENTS
-// -----------------------------
-// JavaScript searches for existing elements in the HTML.
+// Derives the recommendation and UI messages from the current state.
+function evaluateCamp(state) {
+  var needsRest =
+    state.groupCondition === "tired" || state.groupCondition === "critical";
+  var unsafeGround = state.ground === "unstable";
+  var unclearDanger = state.dangerSigns === "unclear";
+  var partialConcealment = state.concealment === "partial";
 
-const backButton = document.querySelector(".back-button");
-
-const summaryCards = document.querySelectorAll(".summary-strip > div");
-const overallRiskCard = summaryCards[0];
-const confidenceCard = summaryCards[1];
-
-const actionButtons = document.querySelectorAll(".action");
-const actionsSection = document.querySelector(".actions");
-
-// -----------------------------
-// 3. CREATE FEEDBACK TEXT AREAS
-// -----------------------------
-// These are small text areas that JavaScript adds to the existing page.
-
-const systemFeedback = document.createElement("p");
-systemFeedback.className = "system-feedback";
-systemFeedback.textContent = "The camp suitability result is ready.";
-
-if (actionsSection) {
-  actionsSection.appendChild(systemFeedback);
-}
-
-const overallRiskDetails = document.createElement("p");
-overallRiskDetails.className = "metric-detail";
-overallRiskDetails.textContent = "";
-
-const confidenceDetails = document.createElement("p");
-confidenceDetails.className = "metric-detail";
-confidenceDetails.textContent = "";
-
-if (overallRiskCard) {
-  overallRiskCard.appendChild(overallRiskDetails);
-}
-
-if (confidenceCard) {
-  confidenceCard.appendChild(confidenceDetails);
-}
-
-// -----------------------------
-// 4. CREATE ANIMATED BARS
-// -----------------------------
-// These bars start empty. When the user clicks, they fill up.
-
-function createMetricBar() {
-  const bar = document.createElement("div");
-  bar.className = "metric-bar";
-
-  const fill = document.createElement("span");
-  fill.className = "metric-bar-fill";
-
-  bar.appendChild(fill);
-
-  return {
-    bar: bar,
-    fill: fill
+  var evaluation = {
+    recommendation: "Rest under guard",
+    riskLevel: "Medium",
+    confidenceLevel: "Low-Medium",
+    recommendationCopy:
+      "The location offers partial concealment, but the ground is uncertain and signs of danger are unclear.",
+    noticeText:
+      "The assessment is based on incomplete signs. The Fellowship should remain cautious and keep watch if resting here.",
+    riskDetails:
+      "Risk is medium because the group needs rest, but the ground is unstable and nearby danger signs are not fully clear.",
+    confidenceDetails:
+      "Confidence is low-medium because the Fellowship has only partial environmental information in the Midgewater Marshes."
   };
+
+  if (!needsRest) {
+    evaluation.recommendation = "Continue the journey";
+    evaluation.riskLevel = "Low";
+    evaluation.confidenceLevel = "Medium";
+    evaluation.recommendationCopy =
+      "The Fellowship is still stable enough to continue. Rest is not urgent at this location.";
+    evaluation.noticeText =
+      "Rest is not required right now. The Fellowship should continue while conditions allow it.";
+  } else if (unsafeGround || unclearDanger || partialConcealment) {
+    evaluation.recommendation = "Rest under guard";
+    evaluation.riskLevel = "Medium";
+    evaluation.confidenceLevel = "Low-Medium";
+  } else {
+    evaluation.recommendation = "Rest here";
+    evaluation.riskLevel = "Low";
+    evaluation.confidenceLevel = "Medium-High";
+    evaluation.recommendationCopy =
+      "The location appears stable, concealed, and free from immediate danger signs.";
+    evaluation.noticeText =
+      "The Fellowship may rest here, but should still remain alert to changes in the environment.";
+  }
+
+  return evaluation;
 }
 
-const overallRiskBar = createMetricBar();
-const confidenceBar = createMetricBar();
+// Converts state values into readable interface labels.
+function formatFactor(value) {
+  if (value === "partial") {
+    return "Partly hidden";
+  }
 
-if (overallRiskCard) {
-  overallRiskCard.appendChild(overallRiskBar.bar);
+  if (value === "unstable") {
+    return "Unstable / uncertain";
+  }
+
+  if (value === "unclear") {
+    return "Unclear tracks nearby";
+  }
+
+  if (value === "limited") {
+    return "Limited";
+  }
+
+  if (value === "tired") {
+    return "Tired";
+  }
+
+  if (value === "critical") {
+    return "Critical";
+  }
+
+  if (value === "stable") {
+    return "Stable";
+  }
+
+  return value;
 }
 
-if (confidenceCard) {
-  confidenceCard.appendChild(confidenceBar.bar);
-}
-const metricHint = document.createElement("p");
-metricHint.className = "metric-hint";
-metricHint.textContent =
-  "Tap Overall Risk or Confidence to inspect the reasoning.";
+// Updates all visible UI elements based on the current state.
+function renderCampEvaluation() {
+  var evaluation = evaluateCamp(campState);
 
-const summaryStrip = document.querySelector(".summary-strip");
+  document.querySelector("#recommendation-title").textContent =
+    evaluation.recommendation;
+  document.querySelector("#risk-summary").textContent =
+    "Current risk: " + evaluation.riskLevel;
+  document.querySelector("#recommendation-copy").textContent =
+    evaluation.recommendationCopy;
+  document.querySelector("#overall-risk-label").textContent =
+    evaluation.riskLevel;
+  document.querySelector("#confidence-label").textContent =
+    evaluation.confidenceLevel;
+  document.querySelector("#notice-text").textContent = evaluation.noticeText;
 
-if (summaryStrip) {
-  summaryStrip.insertAdjacentElement("afterend", metricHint);
-}
-// -----------------------------
-// 5. BACK BUTTON
-// -----------------------------
+  document.querySelector("#factor-concealment").textContent = formatFactor(
+    campState.concealment
+  );
+  document.querySelector("#factor-ground").textContent = formatFactor(
+    campState.ground
+  );
+  document.querySelector("#factor-resources").textContent = formatFactor(
+    campState.resources
+  );
+  document.querySelector("#factor-danger").textContent = formatFactor(
+    campState.dangerSigns
+  );
+  document.querySelector("#factor-condition").textContent = formatFactor(
+    campState.groupCondition
+  );
 
-function handleBackButton(event) {
-  event.preventDefault();
-
-  campState.selectedAction = "previous-step";
-
-  systemFeedback.textContent =
-    "Previous step: returning to the camp conditions input.";
-}
-
-if (backButton) {
-  backButton.addEventListener("click", handleBackButton);
-}
-
-// -----------------------------
-// 6. OVERALL RISK CLICK
-// -----------------------------
-
-function showOverallRisk() {
-  campState.openedPanel = "overall-risk";
-
-  overallRiskCard.classList.add("is-active");
-  confidenceCard.classList.remove("is-active");
-
-  overallRiskBar.fill.style.width = campState.overallRiskValue + "%";
-
-  overallRiskDetails.textContent =
-    "Overall risk is medium because the location offers partial concealment, but the ground is uncertain and signs of danger are unclear.";
-
-  confidenceDetails.textContent = "";
-  confidenceBar.fill.style.width = "0%";
-
-  systemFeedback.textContent =
-    "Overall Risk inspected: Medium risk affects the recommendation.";
+  updateOpenedPanel(evaluation);
+  updateSelectedAction();
 }
 
-if (overallRiskCard) {
-  overallRiskCard.addEventListener("click", showOverallRisk);
+// Shows an explanation when the user opens the risk or confidence card.
+function updateOpenedPanel(evaluation) {
+  var riskCard = document.querySelector("#risk-card");
+  var confidenceCard = document.querySelector("#confidence-card");
+  var feedback = document.querySelector("#system-feedback");
+
+  riskCard.classList.remove("is-open");
+  confidenceCard.classList.remove("is-open");
+
+  if (campState.openedPanel === "risk") {
+    riskCard.classList.add("is-open");
+    feedback.textContent = evaluation.riskDetails;
+  } else if (campState.openedPanel === "confidence") {
+    confidenceCard.classList.add("is-open");
+    feedback.textContent = evaluation.confidenceDetails;
+  } else if (campState.selectedAction === null) {
+    feedback.textContent = "No action selected yet.";
+  }
 }
 
-// -----------------------------
-// 7. CONFIDENCE CLICK
-// -----------------------------
+// Highlights the selected action button.
+function updateSelectedAction() {
+  var actionButtons = document.querySelectorAll("[data-action]");
 
-function showConfidence() {
-  campState.openedPanel = "confidence";
-
-  confidenceCard.classList.add("is-active");
-  overallRiskCard.classList.remove("is-active");
-
-  confidenceBar.fill.style.width = campState.confidenceValue + "%";
-
-  confidenceDetails.textContent =
-    "Confidence is low-medium because some information is incomplete. The recommendation should be used as guidance, not certainty.";
-
-  overallRiskDetails.textContent = "";
-  overallRiskBar.fill.style.width = "0%";
-
-  systemFeedback.textContent =
-    "Confidence inspected: the system is useful, but not completely certain.";
+  actionButtons.forEach(function (button) {
+    if (button.dataset.action === campState.selectedAction) {
+      button.classList.add("is-selected");
+    } else {
+      button.classList.remove("is-selected");
+    }
+  });
 }
 
-if (confidenceCard) {
-  confidenceCard.addEventListener("click", showConfidence);
+// Updates the selected action and explains its consequence.
+function handleActionSelection(action) {
+  var feedback = document.querySelector("#system-feedback");
+
+  campState.selectedAction = action;
+  campState.openedPanel = null;
+
+  if (action === "rest-under-guard") {
+    feedback.textContent =
+      "Recommended action selected. The Fellowship rests briefly while keeping watch because the site is not fully safe.";
+  } else if (action === "rest-here") {
+    feedback.textContent =
+      "Riskier action selected. Resting without a guard ignores the unclear danger signs and unstable ground.";
+  } else if (action === "search-better-camp") {
+    feedback.textContent =
+      "Cautious alternative selected. The Fellowship continues searching for a safer resting place, but fatigue remains.";
+  } else if (action === "continue-journey") {
+    feedback.textContent =
+      "Journey continuation selected. This avoids the current site, but the Fellowship remains tired.";
+  }
+
+  updateSelectedAction();
 }
 
-// -----------------------------
-// 8. ACTION BUTTONS
-// -----------------------------
+// Opens or closes the explanation cards.
+function togglePanel(panelName) {
+  if (campState.openedPanel === panelName) {
+    campState.openedPanel = null;
+  } else {
+    campState.openedPanel = panelName;
+  }
 
-function handleActionChoice(button) {
-  const actionText = button.textContent.trim();
+  renderCampEvaluation();
+}
 
-  actionButtons.forEach(function (otherButton) {
-    otherButton.classList.remove("is-selected");
+// Resets the local interaction state of this screen.
+function resetInterfaceState() {
+  campState.selectedAction = null;
+  campState.openedPanel = null;
+  renderCampEvaluation();
+}
+
+// Initializes all event listeners.
+function initializeInterface() {
+  var riskCard = document.querySelector("#risk-card");
+  var confidenceCard = document.querySelector("#confidence-card");
+  var actionButtons = document.querySelectorAll("[data-action]");
+  var backButton = document.querySelector(".back-button");
+
+  if (riskCard) {
+    riskCard.addEventListener("click", function () {
+      togglePanel("risk");
+    });
+  }
+
+  if (confidenceCard) {
+    confidenceCard.addEventListener("click", function () {
+      togglePanel("confidence");
+    });
+  }
+
+  actionButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      handleActionSelection(button.dataset.action);
+    });
   });
 
-  button.classList.add("is-selected");
-
-  if (actionText === "Rest under guard") {
-    campState.selectedAction = "rest-under-guard";
-
-    systemFeedback.textContent =
-      "Recommendation accepted: Resting under guard matches the Camp Suitability Check result.";
+  if (backButton) {
+    backButton.addEventListener("click", function () {
+      resetInterfaceState();
+    });
   }
 
-  if (actionText === "Rest here") {
-    campState.selectedAction = "rest-here";
-
-    systemFeedback.textContent =
-      "Caution: Resting here without a guard ignores part of the current risk assessment.";
-  }
-
-  if (actionText === "Search for a better camp") {
-    campState.selectedAction = "search-better-camp";
-
-    systemFeedback.textContent =
-      "Redirecting you to the start of the Camp Suitability Check.";
-  }
-
-  if (actionText === "Continue the journey") {
-    campState.selectedAction = "continue-journey";
-
-    systemFeedback.textContent =
-      "Redirecting you to the Home Screen.";
-  }
+  renderCampEvaluation();
 }
 
-actionButtons.forEach(function (button) {
-  button.addEventListener("click", function () {
-    handleActionChoice(button);
-  });
-});
+initializeInterface();
