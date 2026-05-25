@@ -56,7 +56,6 @@ button {
   box-shadow: 0 20px 60px var(--shadow);
 }
 
-/* Layered borders echo the reference document while keeping the mobile layout compact. */
 .page-frame::before,
 .page-frame::after {
   position: absolute;
@@ -104,6 +103,11 @@ button {
   border: 1px solid rgba(117, 83, 39, 0.58);
   border-radius: 0.2rem;
   background: rgba(255, 246, 220, 0.62);
+}
+
+.back-button:hover {
+  background: rgba(255, 246, 220, 0.82);
+  border-color: rgba(32, 59, 37, 0.72);
 }
 
 .back-button::before {
@@ -386,14 +390,25 @@ button {
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 0.75rem;
   align-items: center;
+  width: 100%;
   min-height: 3.75rem;
   padding: 0.52rem 0.65rem;
+  color: var(--ink);
+  font-family: var(--font-serif);
+  text-align: left;
+  cursor: pointer;
   border: 1px solid rgba(117, 83, 39, 0.42);
   border-radius: 0.22rem;
   background: rgba(255, 248, 229, 0.56);
 }
 
-.factor dt {
+.factor:hover,
+.factor.is-open {
+  background: rgba(255, 246, 220, 0.78);
+  border-color: rgba(32, 59, 37, 0.72);
+}
+
+.factor-label {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0.65rem;
@@ -420,8 +435,7 @@ button {
   display: block;
 }
 
-.factor dd {
-  margin: 0;
+.factor-value {
   max-width: 8.5rem;
   color: var(--muted-ink);
   font-family: var(--font-serif);
@@ -516,7 +530,8 @@ button {
 
 .back-button:focus-visible,
 .action:focus-visible,
-.summary-card:focus-visible {
+.summary-card:focus-visible,
+.factor:focus-visible {
   outline: 3px solid rgba(32, 59, 37, 0.55);
   outline-offset: 3px;
 }
