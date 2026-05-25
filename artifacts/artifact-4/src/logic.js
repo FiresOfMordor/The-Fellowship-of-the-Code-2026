@@ -193,6 +193,9 @@ function handleActionSelection(action) {
 }
 
 function togglePanel(panelName) {
+document.querySelector("#risk-card").classList.remove("needs-attention");
+document.querySelector("#confidence-card").classList.remove("needs-attention");  
+  
   if (campState.openedPanel === panelName) {
     campState.openedPanel = null;
   } else {
@@ -223,6 +226,9 @@ function initializeInterface() {
   var actionButtons = document.querySelectorAll("[data-action]");
   var backButton = document.querySelector(".back-button");
 
+  riskCard.classList.add("needs-attention");
+  confidenceCard.classList.add("needs-attention");
+  
   if (riskCard) {
     riskCard.addEventListener("click", function () {
       togglePanel("risk");
