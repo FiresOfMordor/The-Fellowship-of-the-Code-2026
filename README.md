@@ -56,6 +56,7 @@ We are the team **FiresOfMordor**, a group of students working together on the j
 
 [Go to Chapter V →](chapters/chapter-5-the-tale-continues.md)
 
+
 ## Misc / Side Quests
 
 - [Reading the Runes](misc/reading-the-runes.md)
