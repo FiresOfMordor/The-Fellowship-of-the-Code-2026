@@ -56,6 +56,10 @@ We are the team **FiresOfMordor**, a group of students working together on the j
 
 [Go to Chapter V →](chapters/chapter-5-the-tale-continues.md)
 
+## Misc / Side Quests
+
+- [Reading the Runes](misc/reading-the-runes.md)
+
 ## Key Features of The Fellowship Companion
 
 - **Situational Awareness:** help the Fellowship understand the current environment, risks, and constraints
@@ -83,3 +87,4 @@ We are the team **FiresOfMordor**, a group of students working together on the j
 - 2026-05-05: Added CSS styling for Artifact III
 - 2026-05-05: Updated README for Phase 3 focus
 - 2026-05-08: Added Chapter III in The Red Book
+- 2026-05-26: Added side quest analysis for Reading the Runes under `misc/reading-the-runes.md`
