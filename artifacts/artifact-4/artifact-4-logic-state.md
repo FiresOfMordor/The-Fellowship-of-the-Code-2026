@@ -25,7 +25,7 @@ The system gives the Fellowship a shared and explainable basis for deciding whet
 ### Short Description
 The static interface from Assignment 3 was extended with plain JavaScript. The implementation introduces an explicit state model for the current camp situation, evaluates this state through simple decision rules, and updates the visible interface when the Fellowship explores risk details, confidence details, or selects an action.
 
-The HTML structure was kept close to the previous static interface. Only the necessary identifiers and `data-action` attributes were added so that JavaScript can update the interface without changing the overall design. The CSS remains mostly unchanged and only supports the visible states created by the logic.
+The HTML structure was kept close to the previous static interface. Only the necessary identifiers and `data-action` attributes were added so that JavaScript can update the interface without changing the overall design. The CSS remains mostly unchanged and only supports the visible states created by the logic. The CSS also adds a subtle attention cue to the Overall Risk and Confidence cards, because these two values are central for understanding the recommendation before selecting an action.
 
 Files:
 
@@ -45,7 +45,7 @@ This reflects the value defined in Assignment 1: reducing poor decisions when in
 
 The implemented behavior follows the same decision situation as the flow and wireframe from Assignment 2: the Fellowship evaluates whether a possible resting place in the Midgewater Marshes is suitable for rest.
 
-The main interface structure remains based on the previous wireframe: location, recommendation, risk and confidence summary, key factors, notice, and next actions. JavaScript now connects these elements to state. When the user opens the risk or confidence information, the interface explains why the current recommendation is cautious. When the user selects an action, the system checks that choice against the recommendation and gives feedback.
+The main interface structure remains based on the previous wireframe: location, recommendation, risk and confidence summary, key factors, notice, and next actions. JavaScript now connects these elements to state. When the user opens the risk or confidence information, the interface explains why the current recommendation is cautious. When the user selects an action, the system checks that choice against the recommendation and gives feedback. The subtle pulse animation on Overall Risk and Confidence is used as a visual cue to guide the Fellowship toward the most decision-relevant state information without adding a new feature or changing the interaction flow.
 
 ### What constraints or assumptions shaped the logic
 
