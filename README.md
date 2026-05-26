@@ -16,7 +16,7 @@
 
 ## Purpose of The Fellowship Companion (TFC)
 
-We are the team **FiresOfMordor**, a group of students working together on the journey from the Shire to Mordor. Along the way, we are building **The Fellowship Companion**, a digital support system for planning, decision-making, shared understanding, and survival during the journey. The Fellowship Companion is an evolving system. It is not complete from the beginning, but grows across the course as we move from concept to design, logic, and integration. Our current Phase 3 focus is the static representation of the **Camp Suitability Check** within The Shire Guide. In this phase, we move from design to implementation by expressing one selected capability through semantic HTML and CSS, with a focus on structure, hierarchy, and layout.
+We are the team **FiresOfMordor**, a group of students working together on the journey from the Shire to Mordor. Along the way, we are building **The Fellowship Companion**, a digital support system for planning, decision-making, shared understanding, and survival during the journey. The Fellowship Companion is an evolving system. It is not complete from the beginning, but grows across the course as we move from concept to design, logic, and integration. Our current Phase 3 focus is the functional logic of the Camp Suitability Check within The Shire Guide. In this phase, we move from static representation to application logic by adding JavaScript state, rule-based behavior, and UI updates to the existing interface. The goal is to make one selected capability interactive without expanding its scope or adding backend functionality.
 
 - **Who we are:** FiresOfMordor, a student team in the course
 - **What we build:** An evolving companion system that helps manage journey-related decisions, risks, resources, and reflections
@@ -64,10 +64,10 @@ We are the team **FiresOfMordor**, a group of students working together on the j
 ## Key Features of The Fellowship Companion
 
 - **Situational Awareness:** help the Fellowship understand the current environment, risks, and constraints
-- **Decision Support:** support resting, foraging, and short-term survival decisions in unfamiliar terrain
+- **Decision Support:** support resting, foraging, and short-term survival decisions through structured recommendations, visible uncertainty, and simple interaction logic
 - **Resource Awareness:** help identify useful, risky, and uncertain natural resources
 - **Shared Understanding:** provide one clear basis for discussion and alignment within the Fellowship
-- **Journey Record:** document decisions, assumptions, design steps, and changes over time through the Companion and The Red Book
+- **Journey Record:** document decisions, assumptions, design steps, logic changes, and reflections over time through the Companion and The Red Book
 
 - ## Changelog
 
@@ -90,3 +90,4 @@ We are the team **FiresOfMordor**, a group of students working together on the j
 - 2026-05-08: Added Chapter III in The Red Book
 - 2026-05-26: Added side quest analysis for Reading the Runes under `misc/reading-the-runes.md`
 - 2026-05-26: Added Artifact IV (`artifact-4-logic-state.md`)
+- 2026-05-26: Updated README for Phase 3 Application Logic focus
