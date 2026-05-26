@@ -88,3 +88,4 @@ We are the team **FiresOfMordor**, a group of students working together on the j
 - 2026-05-05: Updated README for Phase 3 focus
 - 2026-05-08: Added Chapter III in The Red Book
 - 2026-05-26: Added side quest analysis for Reading the Runes under `misc/reading-the-runes.md`
+- 2026-05-26: Added Artifact IV (`artifact-4-logic-state.md`)
