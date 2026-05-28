@@ -24,22 +24,16 @@ The result is still a focused prototype, not a full application. However, the in
 - Reflect on AI support during code review, logic design, and implementation refinement
 
 ## Artifact
-
-- File: `artifacts/artifact-4/artifact-4-logic-state.md`
-- Supporting files:
-  - `artifacts/artifact-4/src/interface.html`
-  - `artifacts/artifact-4/src/style.css`
-  - `artifacts/artifact-4/src/logic.js`
-
-- Focus: JavaScript logic, state management, interaction behavior, and design rationale for the Camp Suitability Check
-- The artifact reuses the capability **Support Resting and Camp Decisions** from the previous assignments.
-- The HTML structure remains close to the static interface from Artifact III, but includes identifiers and data attributes needed for JavaScript interaction.
-- The CSS remains mostly visual, but now also supports interactive states such as opened panels, selected actions, hover feedback, and subtle attention cues for Risk and Confidence.
-- The JavaScript introduces an explicit state model for the current camp situation.
-- The recommendation is connected to state values such as fatigue, concealment, ground stability, danger signs, resources, and confidence.
-- Users can inspect Overall Risk, Confidence, and individual Key Factors to understand why the recommendation is cautious.
-- Action buttons update the interface with feedback about the selected decision.
-- The Notice section remains important because it shows that the system works with incomplete information and should support, not replace, the Fellowship’s judgement.
+**File:** [artifacts/artifact-4/artifact-4-logic-state.md](../artifacts/artifact-4/artifact-4-logic-state.md)
+**Supporting files:**
+- [artifacts/artifact-4/src/interface.html](../artifacts/artifact-4/src/interface.html)
+- [artifacts/artifact-4/src/style.css](../artifacts/artifact-4/src/style.css)
+- [artifacts/artifact-4/src/logic.js](../artifacts/artifact-4/src/logic.js)
+ 
+- Focus: JavaScript state, interaction logic, UI updates, and design rationale for the Camp Suitability Check
+- The artifact builds directly on the static interface from Artifact III.
+- It adds plain JavaScript to make the existing screen react to user interaction.
+- The implementation keeps the original scope of the Camp Suitability Check and does not add backend functionality, persistence, maps, or a new capability.
 
 ## AI Assistance
 
@@ -67,7 +61,7 @@ The result is still a focused prototype, not a full application. However, the in
 - A small state model can make an interface clearer and more explainable.
 - Storing values such as group condition, concealment, danger signs, and selected action made the Camp Suitability Check more consistent with the original concept.
 - Interaction should support the decision instead of distracting from it.
-- Clickable Risk, Confidence, and Key Factor elements help the Fellowship understand why the recommendation is **“Rest under guard”**.
+- Clickable Risk, Confidence, and Key Factor elements help the Fellowship understand why the recommendation is “Rest under guard”.
 - We deliberately avoided adding larger features such as:
   - maps
   - persistence
@@ -79,22 +73,3 @@ The result is still a focused prototype, not a full application. However, the in
   - With the Notice, the interface communicates that the system provides structured support while the final decision remains with the Fellowship.
 - Overall, Artifact IV helped connect the earlier concept, flow, wireframe, and static interface to actual behavior.
 - The Camp Suitability Check now feels more like a functional part of The Fellowship Companion while still staying focused on one clear decision situation.
-
-## Summary
-
-- This chapter will document our work on logic, interaction, and dynamic behavior.
-
-## Artifact
-**File:** [artifacts/artifact-4/artifact-4-logic-state.md](../artifacts/artifact-4/artifact-4-logic-state.md)
-**Supporting files:**
-- [artifacts/artifact-4/src/interface.html](../artifacts/artifact-4/src/interface.html)
-- [artifacts/artifact-4/src/style.css](../artifacts/artifact-4/src/style.css)
-- [artifacts/artifact-4/src/logic.js](../artifacts/artifact-4/src/logic.js)
-
-## AI Assistance
-
-- To be added later
-
-## Lessons Learned
-
-- To be added later
