@@ -25,12 +25,15 @@ The result is still a focused prototype, not a full application. However, the in
 
 ## Artifact
 **File:** [artifacts/artifact-4/artifact-4-logic-state.md](../artifacts/artifact-4/artifact-4-logic-state.md)
+
 **Supporting files:**
 - [artifacts/artifact-4/src/interface.html](../artifacts/artifact-4/src/interface.html)
 - [artifacts/artifact-4/src/style.css](../artifacts/artifact-4/src/style.css)
 - [artifacts/artifact-4/src/logic.js](../artifacts/artifact-4/src/logic.js)
+
+
+**Focus:** JavaScript state, interaction logic, UI updates, and design rationale for the Camp Suitability Check
  
-- Focus: JavaScript state, interaction logic, UI updates, and design rationale for the Camp Suitability Check
 - The artifact builds directly on the static interface from Artifact III.
 - It adds plain JavaScript to make the existing screen react to user interaction.
 - The implementation keeps the original scope of the Camp Suitability Check and does not add backend functionality, persistence, maps, or a new capability.
