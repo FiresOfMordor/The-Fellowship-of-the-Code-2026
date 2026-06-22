@@ -808,6 +808,21 @@ button {
   background: rgba(255, 236, 216, 0.72);
 }
 
+
+.knowledge-state-card {
+  border-left: 4px solid var(--gold);
+}
+
+.knowledge-state-card.is-prepared {
+  border-left-color: var(--success);
+  background: rgba(217, 225, 204, 0.72);
+}
+
+.knowledge-state-card.is-unprepared {
+  border-left-color: var(--rust);
+  background: rgba(255, 236, 216, 0.72);
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -908,3 +923,4 @@ button {
     font-size: 1.55rem;
   }
 }
+
