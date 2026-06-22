@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>The Shire Guide - Knowledge Challenge</title>
- 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Shire Guide - Knowledge Challenge</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
- 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap%22
+      href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
       rel="stylesheet"
     />
- 
+
     <link rel="stylesheet" href="style.css" />
-</head>
- 
+  </head>
+
   <body>
-<div class="page-frame">
-<header class="top-bar" aria-label="Screen header">
-<button class="back-button" type="button" aria-label="Go back">
+    <div class="page-frame">
+      <header class="top-bar" aria-label="Screen header">
+        <button class="back-button" type="button" aria-label="Go back">
           Back
-</button>
- 
+        </button>
+
         <div class="system-mark" aria-label="System identity">
-<p class="companion-name">The Fellowship Companion</p>
-<p class="guide-name">The Shire Guide</p>
-</div>
-</header>
- 
+          <p class="companion-name">The Fellowship Companion</p>
+          <p class="guide-name">The Shire Guide</p>
+        </div>
+      </header>
+
       <main class="screen">
-<section class="challenge-context" aria-labelledby="page-title">
-<p class="ornament">✦</p>
-<p class="area-label">Knowledge Challenge</p>
- 
+        <section class="challenge-context" aria-labelledby="page-title">
+          <p class="ornament">✦</p>
+          <p class="area-label">Knowledge Challenge</p>
+
           <h1 id="page-title">The Road to Weathertop</h1>
- 
+
           <p class="challenge-progress" id="question-progress">
             Question 2 of 5
-</p>
-</section>
- 
+          </p>
+        </section>
+
         <section
           class="quiz-layout"
           data-quiz
@@ -48,27 +48,33 @@
           data-success-message="Correct. The Fellowship may continue toward the next section."
           data-fail-message="The Fellowship is not prepared yet. Review the warning before moving on."
           aria-labelledby="quiz-title"
->
-<form class="question-panel" id="quiz-form">
-<section class="question-card" aria-labelledby="quiz-title">
-<div class="question-image" aria-hidden="true">
-<span></span>
-</div>
- 
+        >
+          <form class="question-panel" id="quiz-form">
+            <section class="question-card" aria-labelledby="quiz-title">
+              <div class="question-image" aria-hidden="true">
+                <span class="marsh-icon">
+                  <span class="marsh-moon"></span>
+                  <span class="marsh-hill"></span>
+                  <span class="marsh-water"></span>
+                  <span class="marsh-reed marsh-reed-left"></span>
+                  <span class="marsh-reed marsh-reed-right"></span>
+                </span>
+              </div>
+
               <div class="question-text">
-<p class="section-label">Current Question</p>
- 
+                <p class="section-label">Current Question</p>
+
                 <h2 id="quiz-title">
                   What makes the Midgewater Marshes dangerous at night?
-</h2>
-</div>
-</section>
- 
+                </h2>
+              </div>
+            </section>
+
             <fieldset class="answer-list">
-<legend class="visually-hidden">Choose one answer</legend>
- 
+              <legend class="visually-hidden">Choose one answer</legend>
+
               <div class="answer-option">
-<input
+                <input
                   type="radio"
                   id="answer-unstable-ground"
                   name="quiz-answer"
@@ -77,14 +83,14 @@
                   data-correct="true"
                   data-feedback="Correct. The unstable ground makes the Midgewater Marshes dangerous at night."
                 />
-<label for="answer-unstable-ground">
-<span class="answer-marker" aria-hidden="true"></span>
-<span>Unstable Ground</span>
-</label>
-</div>
- 
+                <label for="answer-unstable-ground">
+                  <span class="answer-marker" aria-hidden="true"></span>
+                  <span>Unstable Ground</span>
+                </label>
+              </div>
+
               <div class="answer-option">
-<input
+                <input
                   type="radio"
                   id="answer-marsh-wraiths"
                   name="quiz-answer"
@@ -93,14 +99,14 @@
                   data-correct="false"
                   data-feedback="Not quite. Marsh Wraiths sound threatening, but they are not the correct danger in this challenge."
                 />
-<label for="answer-marsh-wraiths">
-<span class="answer-marker" aria-hidden="true"></span>
-<span>Marsh Wraiths</span>
-</label>
-</div>
- 
+                <label for="answer-marsh-wraiths">
+                  <span class="answer-marker" aria-hidden="true"></span>
+                  <span>Marsh Wraiths</span>
+                </label>
+              </div>
+
               <div class="answer-option">
-<input
+                <input
                   type="radio"
                   id="answer-poisonous-water"
                   name="quiz-answer"
@@ -109,14 +115,14 @@
                   data-correct="false"
                   data-feedback="Not quite. Poisonous water is not the main danger described in this question."
                 />
-<label for="answer-poisonous-water">
-<span class="answer-marker" aria-hidden="true"></span>
-<span>Poisonous Water</span>
-</label>
-</div>
- 
+                <label for="answer-poisonous-water">
+                  <span class="answer-marker" aria-hidden="true"></span>
+                  <span>Poisonous Water</span>
+                </label>
+              </div>
+
               <div class="answer-option">
-<input
+                <input
                   type="radio"
                   id="answer-no-safe-paths"
                   name="quiz-answer"
@@ -125,87 +131,94 @@
                   data-correct="false"
                   data-feedback="Close, but not precise enough. The main danger is the unstable ground."
                 />
-<label for="answer-no-safe-paths">
-<span class="answer-marker" aria-hidden="true"></span>
-<span>No Safe Paths</span>
-</label>
-</div>
-</fieldset>
- 
+                <label for="answer-no-safe-paths">
+                  <span class="answer-marker" aria-hidden="true"></span>
+                  <span>No Safe Paths</span>
+                </label>
+              </div>
+            </fieldset>
+
             <button class="submit-answer" type="submit">
               Submit Answer
-</button>
- 
+            </button>
+
             <p class="quiz-feedback" id="quiz-feedback" aria-live="polite">
               Choose an answer to help the Fellowship prepare.
-</p>
- 
+            </p>
+
             <div
               class="result-animation"
               id="result-animation"
               aria-live="polite"
               data-correct-title="Correct!"
-              data-correct-text="The Fellowship chose wisely."
+              data-correct-text="Happy Smeagol celebrates. The Fellowship chose wisely."
               data-wrong-title="Wrong answer"
-              data-wrong-text="Smeagol says: Try again, precious."
->
-<div class="creature" aria-hidden="true">
-<span class="creature-head"></span>
-<span class="creature-body"></span>
-<span class="creature-arm creature-arm-left"></span>
-<span class="creature-arm creature-arm-right"></span>
-</div>
- 
+              data-wrong-text="Smeagol looks sad. Try again, precious."
+            >
+              <div class="gollum-figure" aria-hidden="true">
+                <span class="gollum-head">
+                  <span class="gollum-eye gollum-eye-left"></span>
+                  <span class="gollum-eye gollum-eye-right"></span>
+                  <span class="gollum-mouth"></span>
+                </span>
+
+                <span class="gollum-body"></span>
+                <span class="gollum-arm gollum-arm-left"></span>
+                <span class="gollum-arm gollum-arm-right"></span>
+                <span class="gollum-leg gollum-leg-left"></span>
+                <span class="gollum-leg gollum-leg-right"></span>
+              </div>
+
               <p class="result-title" id="result-title"></p>
-<p class="result-text" id="result-text"></p>
-</div>
-</form>
- 
+              <p class="result-text" id="result-text"></p>
+            </div>
+          </form>
+
           <aside class="status-panel" aria-labelledby="status-title">
-<h2 id="status-title">
-<span></span>
+            <h2 id="status-title">
+              <span></span>
               Challenge Status
-<span></span>
-</h2>
- 
+              <span></span>
+            </h2>
+
             <div class="status-card">
-<p class="status-label">Attempts</p>
-<p class="status-value" id="attempt-status">0 of 3 used</p>
-</div>
- 
+              <p class="status-label">Attempts</p>
+              <p class="status-value" id="attempt-status">0 of 3 used</p>
+            </div>
+
             <div class="status-card">
-<p class="status-label">Progress</p>
-<p class="status-value">2 / 5</p>
- 
+              <p class="status-label">Progress</p>
+              <p class="status-value">2 / 5</p>
+
               <div class="progress-dots" aria-label="Progress: question 2 of 5">
-<span class="is-complete"></span>
-<span class="is-current"></span>
-<span></span>
-<span></span>
-<span></span>
-</div>
-</div>
- 
+                <span class="is-complete"></span>
+                <span class="is-current"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
             <div
               class="hint-card"
               id="hint-card"
               data-hint="Hint: Think about what becomes harder to judge when the Fellowship travels through marshland in darkness."
->
-<p class="status-label">Hint</p>
-<p id="hint-text">A hint will appear after a wrong answer.</p>
-</div>
- 
+            >
+              <p class="status-label">Hint</p>
+              <p id="hint-text">A hint will appear after a wrong answer.</p>
+            </div>
+
             <div class="warning-card" id="warning-card">
-<p class="status-label">Warning</p>
-<p>
+              <p class="status-label">Warning</p>
+              <p>
                 After 3 wrong attempts, the Fellowship is marked as unprepared.
-</p>
-</div>
-</aside>
-</section>
-</main>
-</div>
- 
+              </p>
+            </div>
+          </aside>
+        </section>
+      </main>
+    </div>
+
     <script src="logic.js"></script>
-</body>
+  </body>
 </html>
