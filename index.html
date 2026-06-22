@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Shire Guide - Knowledge Challenge</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="page-frame">
+      <header class="top-bar" aria-label="Screen header">
+        <button class="back-button" id="nav-back" type="button" aria-label="Previous question">
+          Back
+        </button>
+
+        <div class="system-mark" aria-label="System identity">
+          <p class="companion-name">The Fellowship Companion</p>
+          <p class="guide-name">The Shire Guide</p>
+        </div>
+      </header>
+
+      <main class="screen">
+        <section class="challenge-context" aria-labelledby="page-title">
+          <p class="ornament">&#10022;</p>
+          <p class="area-label">Knowledge Challenge</p>
+
+          <h1 id="page-title">The Road to Weathertop</h1>
+
+          <p class="challenge-progress" id="question-progress">
+            Question 1 of 5
+          </p>
+        </section>
+
+        <section
+          class="quiz-layout"
+          data-quiz
+          data-max-attempts="3"
+          data-success-message="All answers correct. The Fellowship is ready to continue toward the next section."
+          data-fail-message="The Fellowship is not prepared yet. Review the warning before moving on."
+          aria-labelledby="quiz-title"
+        >
+          <form class="question-panel" id="quiz-form">
+            <section class="question-card" id="question-card" aria-labelledby="quiz-title">
+              <div class="question-image" aria-hidden="true">
+                <span></span>
+              </div>
+
+              <div class="question-text">
+                <p class="section-label">Current Question</p>
+                <h2 id="quiz-title">Loading question&#8230;</h2>
+              </div>
+            </section>
+
+            <fieldset class="answer-list" id="answer-list">
+              <legend class="visually-hidden">Choose one answer</legend>
+              <!-- Answer options are rendered here by logic.js -->
+            </fieldset>
+
+            <!-- Review panel: shown after all 5 questions are answered -->
+            <section class="review-panel" id="review-panel" aria-live="polite">
+              <p class="section-label">Results</p>
+              <div class="review-list" id="review-list">
+                <!-- Review items are rendered here by logic.js -->
+              </div>
+            </section>
+
+            <button class="submit-answer" type="submit" id="submit-answer">
+              Next Question
+            </button>
+
+            <p class="quiz-feedback" id="quiz-feedback" aria-live="polite">
+              Answer all five questions. You will see the results at the end.
+            </p>
+
+            <div
+              class="result-animation"
+              id="result-animation"
+              aria-live="polite"
+              data-correct-title="Well done!"
+              data-correct-text="The Fellowship answered every question correctly."
+              data-wrong-title="Not yet ready"
+              data-wrong-text="Smeagol says: Some answers are wrong, precious. Try again."
+            >
+              <div class="creature" aria-hidden="true">
+                <span class="creature-head"></span>
+                <span class="creature-body"></span>
+                <span class="creature-arm creature-arm-left"></span>
+                <span class="creature-arm creature-arm-right"></span>
+              </div>
+
+              <p class="result-title" id="result-title"></p>
+              <p class="result-text" id="result-text"></p>
+            </div>
+          </form>
+
+          <aside class="status-panel" aria-labelledby="status-title">
+            <h2 id="status-title">
+              <span></span>
+              Challenge Status
+              <span></span>
+            </h2>
+
+            <div class="status-card">
+              <p class="status-label">Tries</p>
+              <p class="status-value" id="attempt-status">0 of 3 used</p>
+            </div>
+
+            <div class="status-card">
+              <p class="status-label">Progress</p>
+              <p class="status-value" id="progress-count">1 / 5</p>
+
+              <div
+                class="progress-dots"
+                id="progress-dots"
+                aria-label="Progress through the challenge"
+              >
+                <!-- Progress dots are rendered here by logic.js -->
+              </div>
+            </div>
+
+            <div class="warning-card" id="warning-card">
+              <p class="status-label">Warning</p>
+              <p>
+                The whole quiz may be retried up to 3 times. After 3 unsuccessful
+                tries, the Fellowship is marked as unprepared.
+              </p>
+            </div>
+          </aside>
+        </section>
+      </main>
+    </div>
+
+    <script src="logic.js"></script>
+  </body>
+</html>
