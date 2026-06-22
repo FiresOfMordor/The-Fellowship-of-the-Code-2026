@@ -9,11 +9,17 @@ const warningCard = document.querySelector("#warning-card");
 const resultAnimation = document.querySelector("#result-animation");
 const resultTitle = document.querySelector("#result-title");
 const resultText = document.querySelector("#result-text");
+const storedStateText = document.querySelector("#stored-state");
+const knowledgeStateCard = document.querySelector("#knowledge-state-card");
+
+const STORAGE_KEY = "tfc-knowledge-challenge-road-to-weathertop";
 
 let usedAttempts = 0;
 let quizIsFinished = false;
 
 const maxAttempts = Number(quiz.dataset.maxAttempts);
+
+renderStoredKnowledgeState(readKnowledgeState());
 
 quizForm.addEventListener("submit", handleSubmitAnswer);
 
@@ -57,6 +63,7 @@ function handleCorrectAnswer(selectedAnswer) {
 
   showFeedback(message, "success");
   showResultAnimation("correct");
+  saveKnowledgeState("prepared", selectedAnswer);
   lockQuiz();
 }
 
@@ -77,7 +84,71 @@ function handleWrongAnswer(selectedAnswer) {
     quizIsFinished = true;
     warningCard.classList.add("is-active");
     showFeedback(quiz.dataset.failMessage, "error");
+    saveKnowledgeState("unprepared", selectedAnswer);
     lockQuiz();
+  }
+}
+
+function saveKnowledgeState(status, selectedAnswer) {
+  const knowledgeState = {
+    section: "The Road to Weathertop",
+    challenge: "Midgewater Marshes knowledge check",
+    capability: "Make uncertain knowledge transparent",
+    status: status,
+    attemptsUsed: usedAttempts,
+    maxAttempts: maxAttempts,
+    selectedAnswer: selectedAnswer.value,
+    weakArea: status === "unprepared" ? "environmental danger signs" : null,
+    confidenceImpact: status === "prepared" ? "stable" : "lowered",
+    savedAt: new Date().toISOString()
+  };
+
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(knowledgeState));
+    renderStoredKnowledgeState(knowledgeState);
+  } catch (error) {
+    showFeedback(
+      "The result could not be stored on this device, but the current answer was still evaluated.",
+      "error"
+    );
+  }
+}
+
+function readKnowledgeState() {
+  try {
+    const storedState = localStorage.getItem(STORAGE_KEY);
+
+    if (!storedState) {
+      return null;
+    }
+
+    return JSON.parse(storedState);
+  } catch (error) {
+    return null;
+  }
+}
+
+function renderStoredKnowledgeState(knowledgeState) {
+  if (!storedStateText || !knowledgeStateCard) {
+    return;
+  }
+
+  knowledgeStateCard.classList.remove("is-prepared", "is-unprepared");
+
+  if (!knowledgeState) {
+    storedStateText.textContent = "Not recorded yet";
+    return;
+  }
+
+  if (knowledgeState.status === "prepared") {
+    storedStateText.textContent = "Prepared · confidence stable";
+    knowledgeStateCard.classList.add("is-prepared");
+    return;
+  }
+
+  if (knowledgeState.status === "unprepared") {
+    storedStateText.textContent = "Unprepared · confidence lowered";
+    knowledgeStateCard.classList.add("is-unprepared");
   }
 }
 
