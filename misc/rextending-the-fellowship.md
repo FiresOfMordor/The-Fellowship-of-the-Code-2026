@@ -37,4 +37,4 @@ A small daily automation that generates a quest reminder for the Fellowship of t
 - **Trigger**: Scheduled recurrence (Daily at 09:00 AM)
 - **Action**: Compose message: "Today's objective: Travel carefully through the Midgewater Marshes..."
 
-**File:** [`Bild1.png`](misc/Bild1.png)
+**File:** [`Bild`](misc/Bild1.png)
