@@ -44,7 +44,7 @@ The implemented screen demonstrates the core behavior of the Knowledge Challenge
 
 ## 5. Meaningful Extension
 
-The meaningful extension in this artifact is the Web Storage API, used through `localStorage`.
+The extension in this artifact is the Web Storage API, used through `localStorage`.
 
 The Web Storage API allows the browser to store small pieces of data locally. In this artifact, it stores the result of the Knowledge Challenge as a local knowledge state. This means that the result does not disappear immediately when the page is reloaded.
 
