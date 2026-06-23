@@ -96,5 +96,5 @@ We are the team **FiresOfMordor**, a group of students working together on the j
 - 2026-05-26: Updated README for Phase 3 Application Logic focus
 - 2026-05-28: Added Chapter IV in The Red Book
 - 2026-06-23: Added Artifact V (`artifact-5-integration-extension.md`)
-- 2026-06-23: Updated README for Phase 4 Application Synthesis focus
 - 2026-06-23: Added side quest Extending the FS under `misc/rextending-the-fellowship.md`
+- 2026-06-23: Updated README for Phase 4 Application Synthesis focus
