@@ -30,10 +30,10 @@ https://makecode.com/_YCpevCiYu4Kk
 ## The Fellowship Daily Quest Reminder
 
 A small daily automation that generates a quest reminder for the Fellowship of the Ring.
-**Workflow**: Every day at 09:00 AM, the flow automatically wakes up and creates a message detailing the current objective, warnings, and advice for the journey. This demonstrates how external systems can automatically perform repetitive tasks without manual interaction.
+- **Workflow**: Every day at 09:00 AM, the flow automatically wakes up and creates a message detailing the current objective, warnings, and advice for the journey. This demonstrates how external systems can automatically perform repetitive tasks without manual interaction.
 
 ## Trigger & Action:
 
-**Trigger**: Scheduled recurrence (Daily at 09:00 AM)
-**Action**: Compose message: "Today's objective: Travel carefully through the Midgewater Marshes..."
+- **Trigger**: Scheduled recurrence (Daily at 09:00 AM)
+- **Action**: Compose message: "Today's objective: Travel carefully through the Midgewater Marshes..."
 
