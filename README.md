@@ -16,7 +16,7 @@
 
 ## Purpose of The Fellowship Companion (TFC)
 
-We are the team **FiresOfMordor**, a group of students working together on the journey from the Shire to Mordor. Along the way, we are building **The Fellowship Companion**, a digital support system for planning, decision-making, shared understanding, and survival during the journey. The Fellowship Companion is an evolving system. It is not complete from the beginning, but grows across the course as we move from concept to design, logic, and integration. Our current Phase 3 focus is the functional logic of the Camp Suitability Check within The Shire Guide. In this phase, we move from static representation to application logic by adding JavaScript state, rule-based behavior, and UI updates to the existing interface. The goal is to make one selected capability interactive without expanding its scope or adding backend functionality.
+We are the team **FiresOfMordor**, a group of students working together on the journey from the Shire to Mordor. Along the way, we are building **The Fellowship Companion**, a digital support system for planning, decision-making, shared understanding, and survival during the journey. The Fellowship Companion is an evolving system. It is not complete from the beginning, but grows across the course as we move from concept to design, logic, and integration. Our current Phase 4 focus is the final system synthesis of The Fellowship Companion. We connect the earlier artifacts into a more coherent system view and add the Knowledge Challenge as a new capability slice for making uncertain knowledge transparent.
 
 - **Who we are:** FiresOfMordor, a student team in the course
 - **What we build:** An evolving companion system that helps manage journey-related decisions, risks, resources, and reflections
@@ -92,3 +92,6 @@ We are the team **FiresOfMordor**, a group of students working together on the j
 - 2026-05-26: Added Artifact IV (`artifact-4-logic-state.md`)
 - 2026-05-26: Updated README for Phase 3 Application Logic focus
 - 2026-05-28: Added Chapter IV in The Red Book
+- 2026-06-23: Added Artifact V (`artifact-5-integration-extension.md`)
+- 2026-06-23: Updated README for Phase 4 Application Synthesis focus
+- 2026-06-23: Added side quest Extending the FS under `misc/rextending-the-fellowship.md`
