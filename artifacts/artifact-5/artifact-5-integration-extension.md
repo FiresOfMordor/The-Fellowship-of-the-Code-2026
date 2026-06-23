@@ -44,11 +44,11 @@ The implemented screen demonstrates the core behavior of the Knowledge Challenge
 
 ## 5. Meaningful Extension
 
-The meaningful extension in this artifact is the **Web Storage API**, used through `localStorage`.
+The meaningful extension in this artifact is the Web Storage API, used through `localStorage`.
 
 The Web Storage API allows the browser to store small pieces of data locally. In this artifact, it stores the result of the Knowledge Challenge as a local knowledge state. This means that the result does not disappear immediately when the page is reloaded.
 
-The new interface element **Knowledge State** shows the stored result:
+The new interface element Knowledge State shows the stored result:
 
 - **Not recorded yet** means that no challenge result has been saved.
 - **Prepared · confidence stable** means that the Fellowship passed the challenge.
@@ -92,7 +92,7 @@ We considered other possible extensions, such as a sunset or time-based API. How
 
 We intentionally did not build a full multiplayer quiz system. The current version represents a shared Fellowship challenge, but it does not connect multiple devices or track individual members separately.
 
-We also did not build a large question database. The implementation uses one focused example for **The Road to Weathertop** and the Midgewater Marshes context. This keeps the artifact small and explainable.
+We also did not build a large question database. The implementation uses one focused example for The Road to Weathertop and the Midgewater Marshes context. This keeps the artifact small and explainable.
 
 We did not implement backend storage, user accounts, online synchronization, or real-time group participation. The stored Knowledge State uses local browser storage only.
 
