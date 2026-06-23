@@ -62,8 +62,40 @@ A passed challenge records stable knowledge. A failed challenge records uncertai
 
 ### How the integrated system still reflects the original intent and value
 
+The integrated system still reflects the original intent of The Fellowship Companion: supporting the Fellowship in making safer decisions during the journey. Earlier artifacts focused on a concrete decision situation through the Camp Suitability Check. Artifact 5 adds a preparation layer before such decisions happen.
+
+The Knowledge Challenge supports the same overall value from a different angle. It does not directly recommend where to rest or which route to take. Instead, it makes visible whether the Fellowship has enough shared knowledge before moving into a new journey section. This helps reduce the risk of decisions being made with hidden knowledge gaps.
+
+The challenge also keeps uncertainty visible. If the Fellowship passes, the system records stable confidence. If the Fellowship fails after the available attempts, the system records lowered confidence. This keeps the Companion aligned with the idea that uncertainty should be shown rather than hidden.
+
 ### How individual slices connect meaningfully
+
+The individual slices connect through the wider journey context of The Fellowship Companion.
+
+The Camp Suitability Check supports the Fellowship during a concrete resting decision. The Knowledge Challenge supports the Fellowship before entering a new section by checking whether the group is prepared. Both slices therefore support safer decisions, but at different moments in the journey.
+
+The system flow shows the preparation logic: a new section is about to begin, the Fellowship completes a Knowledge Challenge, and the result either marks the group as prepared or unprepared. The wireframe shows where this capability lives inside The Shire Guide. The implementation snapshot then turns the slice into a working interface with answer selection, attempts, feedback, hints, warnings, and Knowledge State.
+
+The stored Knowledge State creates the strongest connection between slices. A result from the Knowledge Challenge can later be used by other decision-support screens. For example, if the Fellowship is marked as unprepared, a later camp, route, or risk assessment could show lower confidence or stronger caution.
 
 ### Why our chosen extension makes sense
 
+The chosen extension is the Web Storage API, used through `localStorage`.
+
+This extension makes sense because the Knowledge Challenge should not only give temporary feedback. Its result should remain meaningful after the immediate interaction is over. By storing the Knowledge State locally in the browser, the system can remember whether the Fellowship is prepared or unprepared for the next section.
+
+This fits the selected capability well. The goal is to make uncertain knowledge transparent, and the Web Storage API allows this uncertainty to persist beyond the current screen. A passed challenge becomes **Prepared · confidence stable**. A failed challenge becomes **Unprepared · confidence lowered**.
+
+We considered other possible extensions, such as a sunset or time-based API. However, that would mainly add environmental atmosphere or time pressure. The Web Storage API is more directly connected to the selected capability because it stores the knowledge and confidence result itself.
+
 ### What we intentionally did not build
+
+We intentionally did not build a full multiplayer quiz system. The current version represents a shared Fellowship challenge, but it does not connect multiple devices or track individual members separately.
+
+We also did not build a large question database. The implementation uses one focused example for **The Road to Weathertop** and the Midgewater Marshes context. This keeps the artifact small and explainable.
+
+We did not implement backend storage, user accounts, online synchronization, or real-time group participation. The stored Knowledge State uses local browser storage only.
+
+We also did not fully connect the stored Knowledge State to every other Companion screen yet. The current artifact demonstrates the first controlled step: the Knowledge Challenge can create and store a preparedness state that related capabilities could use later.
+
+These limits were intentional. The goal of this final artifact is not to build a complete quiz platform, but to show how one new capability can be integrated into The Fellowship Companion through a controlled extension.
