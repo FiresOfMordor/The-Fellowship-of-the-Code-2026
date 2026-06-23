@@ -68,6 +68,8 @@ We are the team **FiresOfMordor**, a group of students working together on the j
 - **Resource Awareness:** help identify useful, risky, and uncertain natural resources
 - **Shared Understanding:** provide one clear basis for discussion and alignment within the Fellowship
 - **Journey Record:** document decisions, assumptions, design steps, logic changes, and reflections over time through the Companion and The Red Book
+- **Uncertainty Awareness:** make incomplete knowledge visible through confidence levels, warnings, notices, and stored preparedness states
+- **Knowledge Preparedness:** check whether the Fellowship is prepared for upcoming journey sections, reveal weak knowledge areas, and store the result as a persistent Knowledge State
 
 - ## Changelog
 
