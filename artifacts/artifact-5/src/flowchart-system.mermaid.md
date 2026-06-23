@@ -1,12 +1,12 @@
 ```mermaid
 flowchart TD
-    A([Neuer Abschnitt steht bevor]) --> B["Quiz starten<br>Alle Mitglieder antworten"]
-    B --> C{Level bestanden?}
-    C -- Ja --> D[Abschnitt freigeschalten]
-    D --> E([Reise geht weiter])
-    C -- Nein --> H["Schwache Mitglieder<br>Wiederholungsfragen & Hinweis"]
-    H -- Erneut versuchen (bis zu 3x) --> B
-    H -- 3 Versuche aufgebraucht --> J[Warnung: unvorbereitet]
+    A([New section ahead]) --> B["Start quiz<br>All members answer"]
+    B --> C{Level passed?}
+    C -- Yes --> D[Section unlocked]
+    D --> E([Journey continues])
+    C -- No --> H["Weak members<br>Repeat questions & hint"]
+    H -- Try again (up to 3x) --> B
+    H -- 3 attempts used up --> J[Warning: unprepared]
     J --> E
     style A fill:#E1F5EE,stroke:#0F6E56,color:#085041
     style E fill:#E1F5EE,stroke:#0F6E56,color:#085041
@@ -16,3 +16,4 @@ flowchart TD
     style J fill:#FCEBEB,stroke:#A32D2D,color:#501313
     style C fill:#FAEEDA,stroke:#854F0B,color:#412402
 ```
+
