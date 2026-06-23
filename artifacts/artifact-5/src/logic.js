@@ -19,6 +19,7 @@ let quizIsFinished = false;
 
 const maxAttempts = Number(quiz.dataset.maxAttempts);
 
+updateAttemptStatus();
 renderStoredKnowledgeState(readKnowledgeState());
 
 quizForm.addEventListener("submit", handleSubmitAnswer);
@@ -209,4 +210,5 @@ function lockQuiz() {
 
   const submitButton = quizForm.querySelector(".submit-answer");
   submitButton.disabled = true;
+  submitButton.setAttribute("aria-disabled", "true");
 }
