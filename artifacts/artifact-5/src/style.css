@@ -524,173 +524,30 @@ button {
   background: rgba(255, 236, 216, 0.76);
 }
 
-.gollum-figure {
-  position: relative;
-  width: 4rem;
-  height: 4.6rem;
+.gollum-gif-wrap {
+  display: grid;
+  place-items: center;
+  width: 8rem;
+  min-height: 8rem;
   margin-bottom: 0.2rem;
 }
 
-.gollum-head,
-.gollum-body,
-.gollum-arm,
-.gollum-leg,
-.gollum-mouth,
-.gollum-eye {
-  position: absolute;
+.gollum-gif {
+  display: none;
+  width: 8rem;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.35rem;
+  object-fit: contain;
+  box-shadow: 0 4px 12px rgba(44, 29, 9, 0.22);
+}
+
+.result-animation.is-correct .gollum-gif-correct {
   display: block;
 }
 
-.gollum-head {
-  top: 0.2rem;
-  left: 50%;
-  width: 1.9rem;
-  height: 1.45rem;
-  border-radius: 48% 48% 54% 54%;
-  background: #8b956f;
-  transform: translateX(-50%);
-  box-shadow:
-    inset 0 -0.12rem 0 rgba(0, 0, 0, 0.08),
-    0 0 0 1px rgba(74, 59, 42, 0.2);
-}
-
-.gollum-head::before,
-.gollum-head::after {
-  position: absolute;
-  top: 0.08rem;
-  width: 0.45rem;
-  height: 0.55rem;
-  content: "";
-  border-radius: 50%;
-  background: #8b956f;
-}
-
-.gollum-head::before {
-  left: -0.24rem;
-  transform: rotate(-25deg);
-}
-
-.gollum-head::after {
-  right: -0.24rem;
-  transform: rotate(25deg);
-}
-
-.gollum-eye {
-  top: 0.44rem;
-  width: 0.3rem;
-  height: 0.3rem;
-  border-radius: 50%;
-  background: #f7f0d8;
-  box-shadow: inset 0 0 0 0.08rem #2b2116;
-}
-
-.gollum-eye-left {
-  left: 0.48rem;
-}
-
-.gollum-eye-right {
-  right: 0.48rem;
-}
-
-.gollum-mouth {
-  left: 50%;
-  bottom: 0.24rem;
-  width: 0.56rem;
-  height: 0.2rem;
-  border-bottom: 2px solid #4a3b2a;
-  border-radius: 0 0 999px 999px;
-  transform: translateX(-50%);
-}
-
-.gollum-body {
-  top: 1.55rem;
-  left: 50%;
-  width: 1.15rem;
-  height: 1.7rem;
-  border-radius: 45% 45% 40% 40%;
-  background: #737f5d;
-  transform: translateX(-50%);
-}
-
-.gollum-arm {
-  top: 1.78rem;
-  width: 1.35rem;
-  height: 0.18rem;
-  border-radius: 999px;
-  background: #8b956f;
-  transform-origin: center;
-}
-
-.gollum-arm-left {
-  left: 0.16rem;
-  transform: rotate(35deg);
-}
-
-.gollum-arm-right {
-  right: 0.16rem;
-  transform: rotate(-35deg);
-}
-
-.gollum-leg {
-  top: 3rem;
-  width: 0.18rem;
-  height: 1.05rem;
-  border-radius: 999px;
-  background: #8b956f;
-}
-
-.gollum-leg-left {
-  left: 1.52rem;
-  transform: rotate(12deg);
-}
-
-.gollum-leg-right {
-  right: 1.52rem;
-  transform: rotate(-12deg);
-}
-
-.result-animation.is-correct .gollum-figure {
-  animation: gollumHappyBounce 700ms ease-in-out 2;
-}
-
-.result-animation.is-correct .gollum-arm-left {
-  transform: rotate(-48deg);
-}
-
-.result-animation.is-correct .gollum-arm-right {
-  transform: rotate(48deg);
-}
-
-.result-animation.is-correct .gollum-mouth {
-  border-bottom: 2px solid #4a3b2a;
-  border-top: 0;
-  border-radius: 0 0 999px 999px;
-}
-
-.result-animation.is-wrong .gollum-figure {
-  animation: gollumSadSway 700ms ease-in-out 2;
-}
-
-.result-animation.is-wrong .gollum-head {
-  transform: translateX(-50%) rotate(8deg);
-}
-
-.result-animation.is-wrong .gollum-body {
-  transform: translateX(-50%) rotate(10deg);
-}
-
-.result-animation.is-wrong .gollum-arm-left {
-  transform: rotate(70deg);
-}
-
-.result-animation.is-wrong .gollum-arm-right {
-  transform: rotate(-70deg);
-}
-
-.result-animation.is-wrong .gollum-mouth {
-  border-top: 2px solid #4a3b2a;
-  border-bottom: 0;
-  border-radius: 999px 999px 0 0;
+.result-animation.is-wrong .gollum-gif-wrong {
+  display: block;
 }
 
 .result-title {
@@ -839,49 +696,6 @@ button {
   outline-offset: 3px;
 }
 
-@keyframes gollumHappyBounce {
-  0% {
-    transform: translateY(0) scale(1);
-  }
-
-  25% {
-    transform: translateY(-0.25rem) scale(1.03);
-  }
-
-  50% {
-    transform: translateY(0) scale(1);
-  }
-
-  75% {
-    transform: translateY(-0.18rem) scale(1.02);
-  }
-
-  100% {
-    transform: translateY(0) scale(1);
-  }
-}
-
-@keyframes gollumSadSway {
-  0% {
-    transform: translateX(0);
-  }
-
-  25% {
-    transform: translateX(-0.12rem);
-  }
-
-  50% {
-    transform: translateX(0.12rem);
-  }
-
-  75% {
-    transform: translateX(-0.08rem);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
-}
 
 @media (min-width: 700px) {
   body {
@@ -923,4 +737,3 @@ button {
     font-size: 1.55rem;
   }
 }
-
