@@ -60,6 +60,7 @@ We are the team **FiresOfMordor**, a group of students working together on the j
 ## Misc / Side Quests
 
 - [Reading the Runes](misc/reading-the-runes.md)
+- [Extending the Fellowship](misc/rextending-the-fellowship.md)
 
 ## Key Features of The Fellowship Companion
 
