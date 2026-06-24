@@ -1,6 +1,6 @@
 # The Red Book of Westmarch - Chapter IV: When Things React
 
-“Even the wise cannot see all ends.” – Gandalf
+> “Even the wise cannot see all ends.” – Gandalf
 
 ## Summary
 
