@@ -27,11 +27,11 @@ This means that the result of the challenge is no longer only temporary screen f
 
 - File: [Artifact 5: Integration & Extension](../artifacts/artifact-5/artifact-5-integration-extension.md)
 - Supporting files:
-  - `artifacts/artifact-5/src/flowchart-system.mermaid.md`
-  - `artifacts/artifact-5/src/wireframe-system.png`
-  - `artifacts/artifact-5/src/interface.html`
-  - `artifacts/artifact-5/src/style.css`
-  - `artifacts/artifact-5/src/logic.js`
+  - [System flow](../artifacts/artifact-5/src/flowchart-system.mermaid.md)
+  - [System wireframe](../artifacts/artifact-5/src/wireframe-system.png)
+  - [HTML interface](../artifacts/artifact-5/src/interface.html)
+  - [CSS stylesheet](../artifacts/artifact-5/src/style.css)
+  - [JavaScript logic](../artifacts/artifact-5/src/logic.js)
 - Focus: final system synthesis, Knowledge Challenge, uncertainty, stored Knowledge State, and Web Storage API
 - The artifact adds a new capability slice instead of expanding the Camp Suitability Check again.
 - It keeps the implementation small and focused, following the same HTML, CSS, and JavaScript pattern used in earlier artifacts.
