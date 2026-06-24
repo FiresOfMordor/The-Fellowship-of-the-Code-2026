@@ -1,5 +1,7 @@
 # The Red Book of Westmarch - Chapter V: The Tale Continues
 
+> “The tale grew in the telling.” - Bilbo
+
 ## Summary
 
 This chapter documents our work on **Artifact V – Integration & Extension: Knowledge Challenge**.
