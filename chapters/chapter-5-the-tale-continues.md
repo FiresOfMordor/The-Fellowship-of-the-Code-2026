@@ -6,11 +6,11 @@
 
 This chapter documents our work on **Artifact V – Integration & Extension: Knowledge Challenge**.
 
-In this final phase, we moved from working on one isolated capability to thinking about **The Fellowship Companion** as a more connected system. Earlier artifacts focused mainly on the **Camp Suitability Check**, which helped the Fellowship evaluate whether a place was suitable for rest. In Artifact V, we added a new capability slice: **The Fellowship Knowledge Challenge**.
+In this final phase, we moved from working on one isolated capability to thinking about The Fellowship Companion as a more connected system. Earlier artifacts focused mainly on the Camp Suitability Check, which helped the Fellowship evaluate whether a place was suitable for rest. In Artifact V, we added a new capability slice: The Fellowship Knowledge Challenge.
 
 The selected system capability is **Make uncertain knowledge transparent**. The Knowledge Challenge checks whether the Fellowship is prepared for a new journey section before moving forward. It asks a short question about the upcoming area and makes visible whether the group is prepared, uncertain, or unprepared.
 
-The main extension in this artifact is the **Web Storage API**, used through `localStorage`. This allows the system to store the final Knowledge State locally in the browser. A successful challenge is stored as **Prepared · confidence stable**. A failed challenge is stored as **Unprepared · confidence lowered**.
+The main extension in this artifact is the Web Storage API, used through `localStorage`. This allows the system to store the final Knowledge State locally in the browser. A successful challenge is stored as **Prepared · confidence stable**. A failed challenge is stored as **Unprepared · confidence lowered**.
 
 This means that the result of the challenge is no longer only temporary screen feedback. It becomes a small stored system state that could later influence related decision-support screens.
 
@@ -35,7 +35,7 @@ This means that the result of the challenge is no longer only temporary screen f
 - Focus: final system synthesis, Knowledge Challenge, uncertainty, stored Knowledge State, and Web Storage API
 - The artifact adds a new capability slice instead of expanding the Camp Suitability Check again.
 - It keeps the implementation small and focused, following the same HTML, CSS, and JavaScript pattern used in earlier artifacts.
-- The Knowledge Challenge remains part of **The Shire Guide** and does not become a separate application.
+- The Knowledge Challenge remains part of The Shire Guide and does not become a separate application.
 
 ## AI Assistance
 
